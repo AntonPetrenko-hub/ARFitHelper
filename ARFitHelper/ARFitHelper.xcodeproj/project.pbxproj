@@ -14,6 +14,7 @@
 		FDCA8F5923D0ED17002D12E8 /* ARFitHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F5723D0ED17002D12E8 /* ARFitHelper.xcdatamodeld */; };
 		FDCA8F5B23D0ED1A002D12E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */; };
 		FDCA8F5E23D0ED1A002D12E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F5C23D0ED1A002D12E8 /* LaunchScreen.storyboard */; };
+		FDCA8F6723D0F94A002D12E8 /* Manual.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F6523D0F94A002D12E8 /* Manual.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDCA8F5D23D0ED1A002D12E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDCA8F5F23D0ED1A002D12E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCA8F6623D0F94A002D12E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ARFitHelper/Base.lproj/Manual.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */,
 				FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */,
 				FDCA8F5223D0ED17002D12E8 /* ViewController.swift */,
+				FDCA8F6523D0F94A002D12E8 /* Manual.storyboard */,
 				FDCA8F5423D0ED17002D12E8 /* Main.storyboard */,
 				FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */,
 				FDCA8F5C23D0ED1A002D12E8 /* LaunchScreen.storyboard */,
@@ -130,6 +133,7 @@
 			files = (
 				FDCA8F5E23D0ED1A002D12E8 /* LaunchScreen.storyboard in Resources */,
 				FDCA8F5B23D0ED1A002D12E8 /* Assets.xcassets in Resources */,
+				FDCA8F6723D0F94A002D12E8 /* Manual.storyboard in Resources */,
 				FDCA8F5623D0ED17002D12E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +169,14 @@
 				FDCA8F5D23D0ED1A002D12E8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FDCA8F6523D0F94A002D12E8 /* Manual.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDCA8F6623D0F94A002D12E8 /* Base */,
+			);
+			name = Manual.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
