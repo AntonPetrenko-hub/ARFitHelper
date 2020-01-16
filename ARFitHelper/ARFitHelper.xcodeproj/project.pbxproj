@@ -63,14 +63,22 @@
 				FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */,
 				FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */,
 				FDCA8F5223D0ED17002D12E8 /* ViewController.swift */,
-				FDCA8F6523D0F94A002D12E8 /* Manual.storyboard */,
-				FDCA8F5423D0ED17002D12E8 /* Main.storyboard */,
+				FDCA8F6823D0FAE7002D12E8 /* views */,
 				FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */,
 				FDCA8F5C23D0ED1A002D12E8 /* LaunchScreen.storyboard */,
 				FDCA8F5F23D0ED1A002D12E8 /* Info.plist */,
 				FDCA8F5723D0ED17002D12E8 /* ARFitHelper.xcdatamodeld */,
 			);
 			path = ARFitHelper;
+			sourceTree = "<group>";
+		};
+		FDCA8F6823D0FAE7002D12E8 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA8F5423D0ED17002D12E8 /* Main.storyboard */,
+				FDCA8F6523D0F94A002D12E8 /* Manual.storyboard */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
