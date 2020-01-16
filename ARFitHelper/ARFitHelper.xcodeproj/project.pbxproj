@@ -14,7 +14,10 @@
 		FDCA8F5923D0ED17002D12E8 /* ARFitHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F5723D0ED17002D12E8 /* ARFitHelper.xcdatamodeld */; };
 		FDCA8F5B23D0ED1A002D12E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */; };
 		FDCA8F5E23D0ED1A002D12E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F5C23D0ED1A002D12E8 /* LaunchScreen.storyboard */; };
-		FDCA8F6723D0F94A002D12E8 /* Manual.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F6523D0F94A002D12E8 /* Manual.storyboard */; };
+		FDCA8F6A23D1013B002D12E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */; };
+		FDCA8F6C23D1021E002D12E8 /* logCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F6B23D1021E002D12E8 /* logCheck.swift */; };
+		FDCA8F6E23D10C67002D12E8 /* StartPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F6D23D10C67002D12E8 /* StartPage.storyboard */; };
+		FDCA8F7023D10E1A002D12E8 /* MainPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F6F23D10E1A002D12E8 /* MainPageTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +30,10 @@
 		FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDCA8F5D23D0ED1A002D12E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDCA8F5F23D0ED1A002D12E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDCA8F6623D0F94A002D12E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ARFitHelper/Base.lproj/Manual.storyboard; sourceTree = "<group>"; };
+		FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FDCA8F6B23D1021E002D12E8 /* logCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logCheck.swift; sourceTree = "<group>"; };
+		FDCA8F6D23D10C67002D12E8 /* StartPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartPage.storyboard; sourceTree = "<group>"; };
+		FDCA8F6F23D10E1A002D12E8 /* MainPageTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 			children = (
 				FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */,
 				FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */,
+				FDCA8F6B23D1021E002D12E8 /* logCheck.swift */,
+				FDCA8F6F23D10E1A002D12E8 /* MainPageTabBarController.swift */,
+				FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */,
 				FDCA8F5223D0ED17002D12E8 /* ViewController.swift */,
 				FDCA8F6823D0FAE7002D12E8 /* views */,
 				FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */,
@@ -76,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				FDCA8F5423D0ED17002D12E8 /* Main.storyboard */,
-				FDCA8F6523D0F94A002D12E8 /* Manual.storyboard */,
+				FDCA8F6D23D10C67002D12E8 /* StartPage.storyboard */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -141,7 +150,7 @@
 			files = (
 				FDCA8F5E23D0ED1A002D12E8 /* LaunchScreen.storyboard in Resources */,
 				FDCA8F5B23D0ED1A002D12E8 /* Assets.xcassets in Resources */,
-				FDCA8F6723D0F94A002D12E8 /* Manual.storyboard in Resources */,
+				FDCA8F6E23D10C67002D12E8 /* StartPage.storyboard in Resources */,
 				FDCA8F5623D0ED17002D12E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,7 +165,10 @@
 				FDCA8F5323D0ED17002D12E8 /* ViewController.swift in Sources */,
 				FDCA8F4F23D0ED17002D12E8 /* AppDelegate.swift in Sources */,
 				FDCA8F5923D0ED17002D12E8 /* ARFitHelper.xcdatamodeld in Sources */,
+				FDCA8F7023D10E1A002D12E8 /* MainPageTabBarController.swift in Sources */,
+				FDCA8F6A23D1013B002D12E8 /* LoginViewController.swift in Sources */,
 				FDCA8F5123D0ED17002D12E8 /* SceneDelegate.swift in Sources */,
+				FDCA8F6C23D1021E002D12E8 /* logCheck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,14 +189,6 @@
 				FDCA8F5D23D0ED1A002D12E8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		FDCA8F6523D0F94A002D12E8 /* Manual.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FDCA8F6623D0F94A002D12E8 /* Base */,
-			);
-			name = Manual.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

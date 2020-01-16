@@ -7,26 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="aCV-g5-BRh">
-            <objects>
-                <viewController id="h0n-QZ-6Cw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qxt-Fv-CRC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="l94-Hu-PEX"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="7Ir-cR-7ba"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5y5-TK-cKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1540" y="64"/>
-        </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="uWm-fd-Fkg">
             <objects>
-                <viewController id="fUf-kT-mM5" sceneMemberID="viewController">
+                <viewController id="fUf-kT-mM5" customClass="LoginViewController" customModule="ARFitHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zFk-dz-Dnw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +36,16 @@
                                 <state key="normal" title="Log in">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPress:" destination="fUf-kT-mM5" eventType="touchUpInside" id="NfF-Px-cr0"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong login or password!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cd-UL-Zrd">
+                                <rect key="frame" x="124.5" y="691" width="165" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.73989208821717856" green="0.48831593444361321" blue="0.40784965868864187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -61,12 +54,14 @@
                             <constraint firstItem="5dW-2a-Qt6" firstAttribute="centerX" secondItem="jJv-1Y-y8u" secondAttribute="centerX" id="MoA-on-EP4"/>
                             <constraint firstItem="jJv-1Y-y8u" firstAttribute="trailing" secondItem="0RA-n1-gKv" secondAttribute="trailing" id="RUk-GC-a12"/>
                             <constraint firstItem="0RA-n1-gKv" firstAttribute="top" secondItem="jJv-1Y-y8u" secondAttribute="top" id="TE1-q2-AKr"/>
+                            <constraint firstItem="9cd-UL-Zrd" firstAttribute="centerX" secondItem="jJv-1Y-y8u" secondAttribute="centerX" id="dsX-pN-cOd"/>
                             <constraint firstItem="jJv-1Y-y8u" firstAttribute="bottom" secondItem="0RA-n1-gKv" secondAttribute="bottom" id="e6p-Cu-G4w"/>
                             <constraint firstItem="nZv-ex-oXj" firstAttribute="leading" secondItem="jJv-1Y-y8u" secondAttribute="leading" constant="150" id="ef4-xU-SUI"/>
                             <constraint firstItem="0RA-n1-gKv" firstAttribute="leading" secondItem="jJv-1Y-y8u" secondAttribute="leading" id="eky-Vk-pS8"/>
                             <constraint firstItem="nZv-ex-oXj" firstAttribute="top" secondItem="9LM-uN-RZw" secondAttribute="bottom" constant="51" id="gPf-gG-hi2"/>
                             <constraint firstItem="9LM-uN-RZw" firstAttribute="leading" secondItem="jJv-1Y-y8u" secondAttribute="leading" constant="100" id="h3y-Sa-JKn"/>
                             <constraint firstItem="jJv-1Y-y8u" firstAttribute="trailing" secondItem="nZv-ex-oXj" secondAttribute="trailing" constant="150" id="hqf-1Y-dku"/>
+                            <constraint firstItem="9cd-UL-Zrd" firstAttribute="top" secondItem="nZv-ex-oXj" secondAttribute="bottom" constant="8" id="ney-cr-cYv"/>
                             <constraint firstItem="9LM-uN-RZw" firstAttribute="top" secondItem="5dW-2a-Qt6" secondAttribute="bottom" constant="30" id="qQM-Ez-Nea"/>
                             <constraint firstItem="nZv-ex-oXj" firstAttribute="centerX" secondItem="jJv-1Y-y8u" secondAttribute="centerX" id="qVQ-0q-xrt"/>
                             <constraint firstItem="jJv-1Y-y8u" firstAttribute="trailing" secondItem="9LM-uN-RZw" secondAttribute="trailing" constant="100" id="qx2-Q8-wJO"/>
@@ -75,42 +70,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jJv-1Y-y8u"/>
                     </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="5dW-2a-Qt6" id="TQZ-EQ-uAr"/>
+                        <outlet property="lowLabel" destination="9cd-UL-Zrd" id="3W9-Xx-Wu3"/>
+                        <outlet property="passwordTextField" destination="9LM-uN-RZw" id="0qy-uH-H5V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKM-S1-RU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-378" y="-260"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="EHr-v9-h6V">
-            <objects>
-                <tabBarController id="hLM-Sj-Ijf" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EYy-Le-Mg1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="GND-rW-K5y" kind="relationship" relationship="viewControllers" id="y9Q-Nu-5Ci"/>
-                        <segue destination="h0n-QZ-6Cw" kind="relationship" relationship="viewControllers" id="dXA-6m-Fnf"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lC9-XG-deR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="622" y="-260"/>
-        </scene>
-        <!--Manual-->
-        <scene sceneID="b6O-bH-gd7">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Manual" id="GND-rW-K5y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Manual" image="magnifyingglass" catalog="system" id="L4p-hc-KoN"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0bK-70-94S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1540" y="-583"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="the rock" width="900" height="1800"/>
     </resources>
 </document>
