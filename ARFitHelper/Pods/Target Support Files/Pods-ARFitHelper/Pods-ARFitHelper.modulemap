@@ -1,0 +1,6 @@
+framework module Pods_ARFitHelper {
+  umbrella header "Pods-ARFitHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

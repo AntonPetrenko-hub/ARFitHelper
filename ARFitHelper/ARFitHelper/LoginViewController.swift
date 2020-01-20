@@ -31,8 +31,8 @@ class LoginViewController: UIViewController {
             lowLabel.text = "Everything is fine!"
             
             let startingPage: UIStoryboard = UIStoryboard(name: "StartPage", bundle: nil)
-            let mainViewController = startingPage.instantiateViewController(withIdentifier: "MainPageID") as! MainPageTabBarController
-            self.present(mainViewController, animated: true, completion: nil)
+            let mainViewController = startingPage.instantiateViewController(withIdentifier: "MainPageID")
+            self.present(mainViewController, animated: true)
             
         } else {
             lowLabel.text = "Wrong login or password!"

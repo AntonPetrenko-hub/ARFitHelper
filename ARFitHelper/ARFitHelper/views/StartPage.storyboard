@@ -26,7 +26,7 @@
         <!--Main Page Tab Bar Controller-->
         <scene sceneID="rLJ-HQ-EE9">
             <objects>
-                <tabBarController storyboardIdentifier="MainPageID" id="85f-uS-fYp" customClass="MainPageTabBarController" customModule="ARFitHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainPageID" modalPresentationStyle="fullScreen" id="85f-uS-fYp" customClass="MainPageTabBarController" customModule="ARFitHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dCx-le-2uu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

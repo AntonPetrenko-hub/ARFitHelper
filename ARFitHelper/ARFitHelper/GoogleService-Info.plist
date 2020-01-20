@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>455913055821-qg1bt0j2n9egoh0oqjs9ih73nj8o74fc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.455913055821-qg1bt0j2n9egoh0oqjs9ih73nj8o74fc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAk7kj1HGCcluRhVoRVjRKhkNg_MI30QVU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>455913055821</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>PetrenkoInc.ARFitHelper</string>
+	<key>PROJECT_ID</key>
+	<string>arfithelper</string>
+	<key>STORAGE_BUCKET</key>
+	<string>arfithelper.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:455913055821:ios:05db321c68fe852a429e04</string>
+	<key>DATABASE_URL</key>
+	<string>https://arfithelper.firebaseio.com</string>
+</dict>
+</plist>

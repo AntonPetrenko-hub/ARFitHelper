@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8ACE32A8766ADA692BB5D0CE /* Pods_ARFitHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D27B6C340C7E5573AE03712 /* Pods_ARFitHelper.framework */; };
 		FDCA8F4F23D0ED17002D12E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */; };
 		FDCA8F5123D0ED17002D12E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */; };
 		FDCA8F5323D0ED17002D12E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F5223D0ED17002D12E8 /* ViewController.swift */; };
@@ -18,9 +19,15 @@
 		FDCA8F6C23D1021E002D12E8 /* logCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F6B23D1021E002D12E8 /* logCheck.swift */; };
 		FDCA8F6E23D10C67002D12E8 /* StartPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F6D23D10C67002D12E8 /* StartPage.storyboard */; };
 		FDCA8F7023D10E1A002D12E8 /* MainPageTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F6F23D10E1A002D12E8 /* MainPageTabBarController.swift */; };
+		FDD1E30123D4ED2D000698AA /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD1E30023D4ED2D000698AA /* Register.storyboard */; };
+		FDD1E30323D4F357000698AA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1E30223D4F357000698AA /* RegisterViewController.swift */; };
+		FDD1E30523D4F87B000698AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDD1E30423D4F87B000698AA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		334A83D17D23541060B73DD6 /* Pods-ARFitHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFitHelper.release.xcconfig"; path = "Target Support Files/Pods-ARFitHelper/Pods-ARFitHelper.release.xcconfig"; sourceTree = "<group>"; };
+		5D27B6C340C7E5573AE03712 /* Pods_ARFitHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARFitHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7244380CCAFD576FF3FD7A2F /* Pods-ARFitHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFitHelper.debug.xcconfig"; path = "Target Support Files/Pods-ARFitHelper/Pods-ARFitHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		FDCA8F4B23D0ED17002D12E8 /* ARFitHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARFitHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +41,9 @@
 		FDCA8F6B23D1021E002D12E8 /* logCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logCheck.swift; sourceTree = "<group>"; };
 		FDCA8F6D23D10C67002D12E8 /* StartPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartPage.storyboard; sourceTree = "<group>"; };
 		FDCA8F6F23D10E1A002D12E8 /* MainPageTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTabBarController.swift; sourceTree = "<group>"; };
+		FDD1E30023D4ED2D000698AA /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		FDD1E30223D4F357000698AA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FDD1E30423D4F87B000698AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +51,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ACE32A8766ADA692BB5D0CE /* Pods_ARFitHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2940589A36187A107CDF1C77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D27B6C340C7E5573AE03712 /* Pods_ARFitHelper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54F06C3177E83F0490135D3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7244380CCAFD576FF3FD7A2F /* Pods-ARFitHelper.debug.xcconfig */,
+				334A83D17D23541060B73DD6 /* Pods-ARFitHelper.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FDCA8F4223D0ED17002D12E8 = {
 			isa = PBXGroup;
 			children = (
 				FDCA8F4D23D0ED17002D12E8 /* ARFitHelper */,
 				FDCA8F4C23D0ED17002D12E8 /* Products */,
+				54F06C3177E83F0490135D3D /* Pods */,
+				2940589A36187A107CDF1C77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +100,7 @@
 				FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */,
 				FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */,
 				FDCA8F6B23D1021E002D12E8 /* logCheck.swift */,
+				FDD1E30223D4F357000698AA /* RegisterViewController.swift */,
 				FDCA8F6F23D10E1A002D12E8 /* MainPageTabBarController.swift */,
 				FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */,
 				FDCA8F5223D0ED17002D12E8 /* ViewController.swift */,
@@ -76,6 +108,7 @@
 				FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */,
 				FDCA8F5C23D0ED1A002D12E8 /* LaunchScreen.storyboard */,
 				FDCA8F5F23D0ED1A002D12E8 /* Info.plist */,
+				FDD1E30423D4F87B000698AA /* GoogleService-Info.plist */,
 				FDCA8F5723D0ED17002D12E8 /* ARFitHelper.xcdatamodeld */,
 			);
 			path = ARFitHelper;
@@ -85,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FDCA8F5423D0ED17002D12E8 /* Main.storyboard */,
+				FDD1E30023D4ED2D000698AA /* Register.storyboard */,
 				FDCA8F6D23D10C67002D12E8 /* StartPage.storyboard */,
 			);
 			path = views;
@@ -97,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDCA8F6223D0ED1A002D12E8 /* Build configuration list for PBXNativeTarget "ARFitHelper" */;
 			buildPhases = (
+				207F55F69AF023AF56851575 /* [CP] Check Pods Manifest.lock */,
 				FDCA8F4723D0ED17002D12E8 /* Sources */,
 				FDCA8F4823D0ED17002D12E8 /* Frameworks */,
 				FDCA8F4923D0ED17002D12E8 /* Resources */,
+				C980BEEE1002E4F90755BD4A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,10 +188,54 @@
 				FDCA8F5B23D0ED1A002D12E8 /* Assets.xcassets in Resources */,
 				FDCA8F6E23D10C67002D12E8 /* StartPage.storyboard in Resources */,
 				FDCA8F5623D0ED17002D12E8 /* Main.storyboard in Resources */,
+				FDD1E30123D4ED2D000698AA /* Register.storyboard in Resources */,
+				FDD1E30523D4F87B000698AA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		207F55F69AF023AF56851575 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARFitHelper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C980BEEE1002E4F90755BD4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARFitHelper/Pods-ARFitHelper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARFitHelper/Pods-ARFitHelper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARFitHelper/Pods-ARFitHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FDCA8F4723D0ED17002D12E8 /* Sources */ = {
@@ -165,6 +245,7 @@
 				FDCA8F5323D0ED17002D12E8 /* ViewController.swift in Sources */,
 				FDCA8F4F23D0ED17002D12E8 /* AppDelegate.swift in Sources */,
 				FDCA8F5923D0ED17002D12E8 /* ARFitHelper.xcdatamodeld in Sources */,
+				FDD1E30323D4F357000698AA /* RegisterViewController.swift in Sources */,
 				FDCA8F7023D10E1A002D12E8 /* MainPageTabBarController.swift in Sources */,
 				FDCA8F6A23D1013B002D12E8 /* LoginViewController.swift in Sources */,
 				FDCA8F5123D0ED17002D12E8 /* SceneDelegate.swift in Sources */,
@@ -310,6 +391,7 @@
 		};
 		FDCA8F6323D0ED1A002D12E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7244380CCAFD576FF3FD7A2F /* Pods-ARFitHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +409,7 @@
 		};
 		FDCA8F6423D0ED1A002D12E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 334A83D17D23541060B73DD6 /* Pods-ARFitHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
