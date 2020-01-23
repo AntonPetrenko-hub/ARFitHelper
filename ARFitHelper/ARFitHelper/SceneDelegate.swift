@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 self.showModeaAuth()
             }
         }
-
+        
+        addFewExercises()
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }
@@ -30,7 +31,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func showModeaAuth() {
         let storyboard = UIStoryboard(name: "Register", bundle: nil)
         let newViewController = storyboard.instantiateViewController(identifier: "RegisterViewControllerID") as! RegisterViewController
-        self.window?.rootViewController?.present(newViewController, animated: false, completion: nil)
+        self.window?.rootViewController?.present(newViewController, animated: true, completion: nil)
+    }
+    
+    func addFewExercises() {
+        let ref = Database.database().reference().child("exercises")
+        ref.child("bench-press").setValue(["exercisename": "bench-press", "kind": "basic", "targetingMusclesGroup": "chest", "synergistsMusclesGroup": "triceps", "technic": "lie and work hard", "videoURL": "https://youtu.be/sbB_0N_AfHg"])
+        ref.child("boom pressure on the inclined bench").setValue(["exercisename": "boom pressure on the inclined bench", "kind": "basic", "targetingMusclesGroup": "big pectoral, small pectoral", "synergistsMusclesGroup": "triceps", "technic": "lie and work hard on the inclined bench", "videoURL": "https://youtu.be/_Wqq1D8FHKI"])
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

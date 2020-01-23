@@ -34,14 +34,48 @@
                     </tabBar>
                     <connections>
                         <segue destination="k7F-mr-M1W" kind="relationship" relationship="viewControllers" id="hsC-4f-pKe"/>
+                        <segue destination="uIW-o2-hTc" kind="relationship" relationship="viewControllers" id="303-YQ-r8d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lc5-Iy-jwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-896" y="-386"/>
+            <point key="canvasLocation" x="-1203" y="-246"/>
+        </scene>
+        <!--Manual-->
+        <scene sceneID="b20-VB-rRu">
+            <objects>
+                <tableViewController id="uIW-o2-hTc" customClass="ManualTableViewController" customModule="ARFitHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yzq-BU-HtN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ClP-nj-FHp">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ClP-nj-FHp" id="HOW-MO-sgh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uIW-o2-hTc" id="r57-1U-4TM"/>
+                            <outlet property="delegate" destination="uIW-o2-hTc" id="x2b-sv-mWT"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Manual" image="book" catalog="system" selectedImage="book" id="Qm7-eh-DvN"/>
+                    <connections>
+                        <outlet property="myTableView" destination="Yzq-BU-HtN" id="94h-fj-08V"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsZ-32-bMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="9"/>
         </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="64" height="50"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
 </document>

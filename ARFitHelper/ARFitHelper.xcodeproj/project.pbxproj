@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8ACE32A8766ADA692BB5D0CE /* Pods_ARFitHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D27B6C340C7E5573AE03712 /* Pods_ARFitHelper.framework */; };
+		FD280AFD23D78B140024698D /* ManualTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD280AFC23D78B140024698D /* ManualTableViewController.swift */; };
+		FD280B0023D795310024698D /* ManualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD280AFE23D795310024698D /* ManualTableViewCell.swift */; };
+		FD280B0123D795310024698D /* ManualTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD280AFF23D795310024698D /* ManualTableViewCell.xib */; };
+		FD7D894223D8F31600130C4F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7D894123D8F31600130C4F /* Exercise.swift */; };
 		FDCA8F4F23D0ED17002D12E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */; };
 		FDCA8F5123D0ED17002D12E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */; };
 		FDCA8F5323D0ED17002D12E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F5223D0ED17002D12E8 /* ViewController.swift */; };
@@ -28,6 +32,10 @@
 		334A83D17D23541060B73DD6 /* Pods-ARFitHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFitHelper.release.xcconfig"; path = "Target Support Files/Pods-ARFitHelper/Pods-ARFitHelper.release.xcconfig"; sourceTree = "<group>"; };
 		5D27B6C340C7E5573AE03712 /* Pods_ARFitHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARFitHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7244380CCAFD576FF3FD7A2F /* Pods-ARFitHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFitHelper.debug.xcconfig"; path = "Target Support Files/Pods-ARFitHelper/Pods-ARFitHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		FD280AFC23D78B140024698D /* ManualTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTableViewController.swift; sourceTree = "<group>"; };
+		FD280AFE23D795310024698D /* ManualTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTableViewCell.swift; sourceTree = "<group>"; };
+		FD280AFF23D795310024698D /* ManualTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualTableViewCell.xib; sourceTree = "<group>"; };
+		FD7D894123D8F31600130C4F /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		FDCA8F4B23D0ED17002D12E8 /* ARFitHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARFitHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,8 +80,28 @@
 				7244380CCAFD576FF3FD7A2F /* Pods-ARFitHelper.debug.xcconfig */,
 				334A83D17D23541060B73DD6 /* Pods-ARFitHelper.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD280B0223D795670024698D /* models */ = {
+			isa = PBXGroup;
+			children = (
+				FD7D894123D8F31600130C4F /* Exercise.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		FD280B0323D795770024698D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA8F6B23D1021E002D12E8 /* logCheck.swift */,
+				FD280AFC23D78B140024698D /* ManualTableViewController.swift */,
+				FDCA8F6F23D10E1A002D12E8 /* MainPageTabBarController.swift */,
+				FDD1E30223D4F357000698AA /* RegisterViewController.swift */,
+				FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */,
+				FDCA8F5223D0ED17002D12E8 /* ViewController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 		FDCA8F4223D0ED17002D12E8 = {
@@ -97,16 +125,13 @@
 		FDCA8F4D23D0ED17002D12E8 /* ARFitHelper */ = {
 			isa = PBXGroup;
 			children = (
-				FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */,
-				FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */,
-				FDCA8F6B23D1021E002D12E8 /* logCheck.swift */,
-				FDD1E30223D4F357000698AA /* RegisterViewController.swift */,
-				FDCA8F6F23D10E1A002D12E8 /* MainPageTabBarController.swift */,
-				FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */,
-				FDCA8F5223D0ED17002D12E8 /* ViewController.swift */,
+				FD280B0223D795670024698D /* models */,
+				FD280B0323D795770024698D /* controllers */,
 				FDCA8F6823D0FAE7002D12E8 /* views */,
 				FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */,
 				FDCA8F5C23D0ED1A002D12E8 /* LaunchScreen.storyboard */,
+				FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */,
+				FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */,
 				FDCA8F5F23D0ED1A002D12E8 /* Info.plist */,
 				FDD1E30423D4F87B000698AA /* GoogleService-Info.plist */,
 				FDCA8F5723D0ED17002D12E8 /* ARFitHelper.xcdatamodeld */,
@@ -118,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				FDCA8F5423D0ED17002D12E8 /* Main.storyboard */,
+				FD280AFE23D795310024698D /* ManualTableViewCell.swift */,
+				FD280AFF23D795310024698D /* ManualTableViewCell.xib */,
 				FDD1E30023D4ED2D000698AA /* Register.storyboard */,
 				FDCA8F6D23D10C67002D12E8 /* StartPage.storyboard */,
 			);
@@ -185,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDCA8F5E23D0ED1A002D12E8 /* LaunchScreen.storyboard in Resources */,
+				FD280B0123D795310024698D /* ManualTableViewCell.xib in Resources */,
 				FDCA8F5B23D0ED1A002D12E8 /* Assets.xcassets in Resources */,
 				FDCA8F6E23D10C67002D12E8 /* StartPage.storyboard in Resources */,
 				FDCA8F5623D0ED17002D12E8 /* Main.storyboard in Resources */,
@@ -245,9 +273,12 @@
 				FDCA8F5323D0ED17002D12E8 /* ViewController.swift in Sources */,
 				FDCA8F4F23D0ED17002D12E8 /* AppDelegate.swift in Sources */,
 				FDCA8F5923D0ED17002D12E8 /* ARFitHelper.xcdatamodeld in Sources */,
+				FD280B0023D795310024698D /* ManualTableViewCell.swift in Sources */,
 				FDD1E30323D4F357000698AA /* RegisterViewController.swift in Sources */,
 				FDCA8F7023D10E1A002D12E8 /* MainPageTabBarController.swift in Sources */,
+				FD7D894223D8F31600130C4F /* Exercise.swift in Sources */,
 				FDCA8F6A23D1013B002D12E8 /* LoginViewController.swift in Sources */,
+				FD280AFD23D78B140024698D /* ManualTableViewController.swift in Sources */,
 				FDCA8F5123D0ED17002D12E8 /* SceneDelegate.swift in Sources */,
 				FDCA8F6C23D1021E002D12E8 /* logCheck.swift in Sources */,
 			);
