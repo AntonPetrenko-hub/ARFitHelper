@@ -12,10 +12,6 @@ class ManualTableViewController: UITableViewController {
     
     @IBOutlet var myTableView: UITableView!
     
-    var exc1 = Exercise(name: "bench-press", kind: "basic", targetingMuscles: "chest", synergistsMuscles: "triceps", technic: "lie and work hard", videoURL: URL(string: "https://youtu.be/sbB_0N_AfHg")!)
-       
-       var exc2 = Exercise(name: "lying bench-press with free weights", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the bench with free weights", videoURL: URL(string: "https://youtu.be/n48eoyd53kk")!)
-    
     private var exercises: [Exercise] = [Exercise(name: "bench-press", kind: "basic", targetingMuscles: "chest", synergistsMuscles: "triceps", technic: "lie and work hard", videoURL: URL(string: "https://youtu.be/sbB_0N_AfHg")!), Exercise(name: "boom pressure on the inclined bench", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the inclined bench", videoURL: URL(string: "https://youtu.be/_Wqq1D8FHKI")!), Exercise(name: "lying bench-press with free weights", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the bench with free weights", videoURL: URL(string: "https://youtu.be/n48eoyd53kk")!)]
     
     
@@ -48,6 +44,22 @@ class ManualTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let page: UIStoryboard = UIStoryboard(name: "DetailedExercise", bundle: Bundle.main)
+        let viewController = page.instantiateViewController(withIdentifier: "DetailedManualID") as! DetailedManualViewController
+        viewController.exc = exercises[indexPath.row]
+        self.present(viewController, animated: true)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    @IBAction func backButtonPress(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "StartPage", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "MainPageID")
+        self.present(viewController, animated: true)
+    }
+    
 
 }
 

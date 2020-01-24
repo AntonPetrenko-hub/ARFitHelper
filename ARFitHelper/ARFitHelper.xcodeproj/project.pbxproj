@@ -12,6 +12,8 @@
 		FD280B0023D795310024698D /* ManualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD280AFE23D795310024698D /* ManualTableViewCell.swift */; };
 		FD280B0123D795310024698D /* ManualTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD280AFF23D795310024698D /* ManualTableViewCell.xib */; };
 		FD7D894223D8F31600130C4F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7D894123D8F31600130C4F /* Exercise.swift */; };
+		FD9D5AE523DA28F9006D06E9 /* DetailedExercise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD9D5AE423DA28F9006D06E9 /* DetailedExercise.storyboard */; };
+		FD9D5AE723DA295F006D06E9 /* DetailedManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D5AE623DA295F006D06E9 /* DetailedManualViewController.swift */; };
 		FDCA8F4F23D0ED17002D12E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */; };
 		FDCA8F5123D0ED17002D12E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */; };
 		FDCA8F5323D0ED17002D12E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F5223D0ED17002D12E8 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 		FD280AFE23D795310024698D /* ManualTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTableViewCell.swift; sourceTree = "<group>"; };
 		FD280AFF23D795310024698D /* ManualTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualTableViewCell.xib; sourceTree = "<group>"; };
 		FD7D894123D8F31600130C4F /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		FD9D5AE423DA28F9006D06E9 /* DetailedExercise.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailedExercise.storyboard; sourceTree = "<group>"; };
+		FD9D5AE623DA295F006D06E9 /* DetailedManualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedManualViewController.swift; sourceTree = "<group>"; };
 		FDCA8F4B23D0ED17002D12E8 /* ARFitHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARFitHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FD7D894123D8F31600130C4F /* Exercise.swift */,
+				FD9D5AE623DA295F006D06E9 /* DetailedManualViewController.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				FDD1E30223D4F357000698AA /* RegisterViewController.swift */,
 				FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */,
 				FDCA8F5223D0ED17002D12E8 /* ViewController.swift */,
+				FD9D5AE423DA28F9006D06E9 /* DetailedExercise.storyboard */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9D5AE523DA28F9006D06E9 /* DetailedExercise.storyboard in Resources */,
 				FDCA8F5E23D0ED1A002D12E8 /* LaunchScreen.storyboard in Resources */,
 				FD280B0123D795310024698D /* ManualTableViewCell.xib in Resources */,
 				FDCA8F5B23D0ED1A002D12E8 /* Assets.xcassets in Resources */,
@@ -281,6 +288,7 @@
 				FD280AFD23D78B140024698D /* ManualTableViewController.swift in Sources */,
 				FDCA8F5123D0ED17002D12E8 /* SceneDelegate.swift in Sources */,
 				FDCA8F6C23D1021E002D12E8 /* logCheck.swift in Sources */,
+				FD9D5AE723DA295F006D06E9 /* DetailedManualViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

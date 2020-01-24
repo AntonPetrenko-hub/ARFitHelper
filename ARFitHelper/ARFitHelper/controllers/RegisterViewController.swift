@@ -12,7 +12,8 @@ import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
     
-//    var signUp: Bool = true {
+//    var signUp: Bool = true
+//    {
 //        willSet{
 //            if newValue {
 //                logInOrRegLabel.text = "Registration"
@@ -53,6 +54,9 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerButtonPress(_ sender: Any) {
 //        signUp = !signUp
+        let page: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let viewController = page.instantiateViewController(withIdentifier: "MainID") as! ViewController
+        self.present(viewController, animated: true)
     }
     
     func showAlert() {
