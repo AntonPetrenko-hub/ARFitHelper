@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="uWm-fd-Fkg">
             <objects>
-                <viewController storyboardIdentifier="MianID" id="fUf-kT-mM5" customClass="LoginViewController" customModule="ARFitHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainID" id="fUf-kT-mM5" customClass="LoginViewController" customModule="ARFitHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zFk-dz-Dnw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Log Out">
+                                <state key="normal" title="Register">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>

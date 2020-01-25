@@ -17,21 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         FirebaseApp.configure()
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            if user == nil {
-                self.showModeaAuth()
-            }
-        }
-        
+
         addFewExercises()
         
         guard let _ = (scene as? UIWindowScene) else { return }
-    }
-    
-    func showModeaAuth() {
-        let storyboard = UIStoryboard(name: "Register", bundle: nil)
-        let newViewController = storyboard.instantiateViewController(identifier: "RegisterViewControllerID") as! RegisterViewController
-        self.window?.rootViewController?.present(newViewController, animated: true, completion: nil)
     }
     
     func addFewExercises() {

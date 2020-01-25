@@ -12,22 +12,7 @@ import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
     
-//    var signUp: Bool = true
-//    {
-//        willSet{
-//            if newValue {
-//                logInOrRegLabel.text = "Registration"
-//                nameTextField.isHidden = false
-//                registerButton.setTitle("Enter", for: .normal)
-//
-//
-//            } else {
-//                logInOrRegLabel.text = "Enter"
-//                nameTextField.isHidden = true
-//                registerButton.setTitle("Register", for: .normal)
-//            }
-//        }
-//    }
+
     @IBOutlet weak var logInOrRegLabel: UILabel!
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -46,17 +31,41 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         self.registerButton.layer.cornerRadius = 14
-        nameTextField.delegate = self
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
         
     }
 
     @IBAction func registerButtonPress(_ sender: Any) {
-//        signUp = !signUp
-        let page: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let viewController = page.instantiateViewController(withIdentifier: "MainID") as! ViewController
-        self.present(viewController, animated: true)
+        
+                let name = nameTextField.text!
+                let email = emailTextField.text!
+                let password = passwordTextField.text!
+                
+                if(!name.isEmpty && !email.isEmpty && !password.isEmpty) {
+                    Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                        if error == nil {
+                            if let result = result {
+                                let ref = Database.database().reference().child("users")
+                                
+                                ref.child(result.user.uid).updateChildValues(["name" : name, "email" : email, "surname": self.surnameTextField.text!])
+                                self.dismiss(animated: true, completion: nil)
+                                
+                                let startingPage: UIStoryboard = UIStoryboard(name: "StartPage", bundle: nil)
+                                let mainViewController = startingPage.instantiateViewController(withIdentifier: "MainPageID") as! MainPageTabBarController
+                                self.present(mainViewController, animated: true)
+                            }
+                        } else {
+                            self.showDBorNetworkAlert()
+                        }
+                    }
+                } else {
+                    showAlert()
+                }
+    }
+    
+    func showDBorNetworkAlert() {
+        let alert = UIAlertController(title: "Error", message: "Network or database error", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     func showAlert() {
@@ -64,28 +73,13 @@ class RegisterViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true)
     }
+    
+    @IBAction func backButtonWasPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainID") as! LoginViewController
+        self.present(vc, animated: true)
+    }
+    
+    
 }
 
-extension RegisterViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let name = nameTextField.text!
-        let email = emailTextField.text!
-        let password = passwordTextField.text!
-        
-        if(!name.isEmpty && !email.isEmpty && !password.isEmpty) {
-            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-                if error == nil {
-                    if let result = result {
-//                        print(result.user.uid)
-                        let ref = Database.database().reference().child("users")
-                        ref.child(result.user.uid).updateChildValues(["name" : name, "email" : email])
-                        self.dismiss(animated: true, completion: nil)
-                    }
-                }
-            }
-        } else {
-            showAlert()
-        }
-        return true
-    }
-}

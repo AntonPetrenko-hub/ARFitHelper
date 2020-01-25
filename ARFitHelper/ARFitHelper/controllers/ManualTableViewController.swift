@@ -8,41 +8,88 @@
 
 import UIKit
 
-class ManualTableViewController: UITableViewController {
+class ManualTableViewController: UITableViewController, UISearchResultsUpdating {
+    
+    var resultSearchController = UISearchController()
+    var exercisesNames = [String]()
+    var exercisesKind = [String]()
+    var exercisesTargetingMuscles = [String]()
     
     @IBOutlet var myTableView: UITableView!
     
     private var exercises: [Exercise] = [Exercise(name: "bench-press", kind: "basic", targetingMuscles: "chest", synergistsMuscles: "triceps", technic: "lie and work hard", videoURL: URL(string: "https://youtu.be/sbB_0N_AfHg")!), Exercise(name: "boom pressure on the inclined bench", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the inclined bench", videoURL: URL(string: "https://youtu.be/_Wqq1D8FHKI")!), Exercise(name: "lying bench-press with free weights", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the bench with free weights", videoURL: URL(string: "https://youtu.be/n48eoyd53kk")!)]
     
+    var filteredTableData = [Exercise]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for item in 0..<exercises.count {
+            exercisesNames.append(exercises[item].name)
+            exercisesKind.append(exercises[item].kind)
+            exercisesTargetingMuscles.append(exercises[item].targetingMuscles)
+        }
+        
+        print(exercisesNames)
         
         myTableView.dataSource = self
         myTableView.delegate = self
         let nib = UINib(nibName: "ManualTableViewCell", bundle: nil)
         myTableView.register(nib, forCellReuseIdentifier: "ManualCellID")
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+       // MARK: Configure search bar
+        
+        resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+            tableView.tableHeaderView = controller.searchBar
+
+            return controller
+        })()
+
+        // Reload the table
+        tableView.reloadData()
+       
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return exercises.count
+        
+        if  (resultSearchController.isActive) {
+             return filteredTableData.count
+         } else {
+             return exercises.count
+         }
+        
+       
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ManualCellID", for: indexPath) as! ManualTableViewCell
         
-        cell.configure(exercises[indexPath.row])
+        
+        if (resultSearchController.isActive) {
+//            cell.textLabel?.text = filteredTableData[indexPath.row]
+            cell.configure(filteredTableData[indexPath.row])
 
-        return cell
+
+            return cell
+        }
+        else {
+            cell.configure(exercises[indexPath.row])
+
+//            cell.textLabel?.text = tableData[indexPath.row]
+//            print(tableData[indexPath.row])
+            return cell
+        }
+        
+//        return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -59,7 +106,22 @@ class ManualTableViewController: UITableViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier: "MainPageID")
         self.present(viewController, animated: true)
     }
-    
+ 
+    func updateSearchResults(for searchController: UISearchController) {
+        filteredTableData.removeAll(keepingCapacity: false)
+
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+//        let testTableData = exercises
+//        let array1 = (exercisesNames as NSArray).filtered(using: searchPredicate)
+//        let array2 = (exercisesKind as NSArray).filtered(using: searchPredicate)
+//        let array3 = (exercisesTargetingMuscles as NSArray).filtered(using: searchPredicate)
+        
+        let res = exercises.filter{ searchPredicate.evaluate(with: $0.name) || searchPredicate.evaluate(with: $0.kind) || searchPredicate.evaluate(with: $0.targetingMuscles)}
+        
+        filteredTableData = res as! [Exercise]
+
+        self.tableView.reloadData()
+    }
 
 }
 
