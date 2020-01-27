@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
 class ManualTableViewController: UITableViewController, UISearchResultsUpdating {
     
+    var databaseReference: DatabaseReference?
+    var databaseHandle: DatabaseHandle?
+    var newExc: Exercise?
+        
     var resultSearchController = UISearchController()
-    var exercisesNames = [String]()
-    var exercisesKind = [String]()
-    var exercisesTargetingMuscles = [String]()
     
     @IBOutlet var myTableView: UITableView!
     
-    private var exercises: [Exercise] = [Exercise(name: "bench-press", kind: "basic", targetingMuscles: "chest", synergistsMuscles: "triceps", technic: "lie and work hard", videoURL: URL(string: "https://youtu.be/sbB_0N_AfHg")!), Exercise(name: "boom pressure on the inclined bench", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the inclined bench", videoURL: URL(string: "https://youtu.be/_Wqq1D8FHKI")!), Exercise(name: "lying bench-press with free weights", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the bench with free weights", videoURL: URL(string: "https://youtu.be/n48eoyd53kk")!)]
+    var exercises = [Exercise]()
+//        [Exercise(name: "bench-press", kind: "basic", targetingMuscles: "chest", synergistsMuscles: "triceps", technic: "lie and work hard", videoURL: "https://youtu.be/sbB_0N_AfHg"), Exercise(name: "boom pressure on the inclined bench", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the inclined bench", videoURL: "https://youtu.be/_Wqq1D8FHKI"), Exercise(name: "lying bench-press with free weights", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the bench with free weights", videoURL: "https://youtu.be/n48eoyd53kk")]
     
     var filteredTableData = [Exercise]()
 
@@ -25,13 +28,7 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for item in 0..<exercises.count {
-            exercisesNames.append(exercises[item].name)
-            exercisesKind.append(exercises[item].kind)
-            exercisesTargetingMuscles.append(exercises[item].targetingMuscles)
-        }
-        
-        print(exercisesNames)
+        getDataFromDatabase()
         
         myTableView.dataSource = self
         myTableView.delegate = self
@@ -51,7 +48,6 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
             return controller
         })()
 
-        // Reload the table
         tableView.reloadData()
        
     }
@@ -59,15 +55,12 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        
+
         if  (resultSearchController.isActive) {
              return filteredTableData.count
          } else {
              return exercises.count
          }
-        
-       
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,21 +68,16 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
         
         
         if (resultSearchController.isActive) {
-//            cell.textLabel?.text = filteredTableData[indexPath.row]
+            
             cell.configure(filteredTableData[indexPath.row])
-
-
             return cell
         }
         else {
             cell.configure(exercises[indexPath.row])
 
-//            cell.textLabel?.text = tableData[indexPath.row]
-//            print(tableData[indexPath.row])
             return cell
         }
         
-//        return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -97,7 +85,9 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
         let page: UIStoryboard = UIStoryboard(name: "DetailedExercise", bundle: Bundle.main)
         let viewController = page.instantiateViewController(withIdentifier: "DetailedManualID") as! DetailedManualViewController
         viewController.exc = exercises[indexPath.row]
-        self.present(viewController, animated: true)
+//        self.present(viewController, animated: true)
+        resultSearchController.isEditing = false
+        self.navigationController?.pushViewController(viewController, animated: true)
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -111,16 +101,30 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
         filteredTableData.removeAll(keepingCapacity: false)
 
         let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
-//        let testTableData = exercises
-//        let array1 = (exercisesNames as NSArray).filtered(using: searchPredicate)
-//        let array2 = (exercisesKind as NSArray).filtered(using: searchPredicate)
-//        let array3 = (exercisesTargetingMuscles as NSArray).filtered(using: searchPredicate)
         
         let res = exercises.filter{ searchPredicate.evaluate(with: $0.name) || searchPredicate.evaluate(with: $0.kind) || searchPredicate.evaluate(with: $0.targetingMuscles)}
         
-        filteredTableData = res as! [Exercise]
+        filteredTableData = res 
 
         self.tableView.reloadData()
+    }
+    
+    func getDataFromDatabase() {
+        
+        databaseReference = Database.database().reference()
+        
+       databaseHandle = databaseReference?.child("exercises").observe(.childAdded, with: { (snapshot) in
+        
+        let exerciseFromDB = snapshot.value
+     
+        if let dict = exerciseFromDB as? [AnyHashable: Any]{
+            let exc = Exercise(name: dict["exercisename"] as? String ?? ""
+, kind: dict["kind"] as? String ?? "", targetingMuscles: dict["targetingMusclesGroup"] as? String ?? "", synergistsMuscles: dict["synergistsMusclesGroup"] as? String ?? "", technic: dict["technic"] as? String ?? "", videoURL: dict["videoURL"] as? String ?? "")
+            self.exercises.append(exc)
+        }
+        self.tableView.reloadData()
+        })
+        
     }
 
 }

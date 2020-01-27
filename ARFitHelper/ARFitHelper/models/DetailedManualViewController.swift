@@ -31,16 +31,16 @@ class DetailedManualViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Exercise"
+        
         nameLabel.text = "Name: " + exc!.name
         kindLabel.text = "Type: " + exc!.kind
         targetingLabel.text = "Targeting: " + exc!.targetingMuscles
         synergistLabel.text = "Synergists: " + exc!.synergistsMuscles
         technicLabel.text = "Technic: " + exc!.technic
         
-        getVideo(exc!.videoURL)
+        getVideo(URL(string: exc!.videoURL)!)
         
-//        print(exc)
-        // Do any additional setup after loading the view.
     }
     
     
@@ -51,7 +51,6 @@ class DetailedManualViewController: UIViewController {
     }
     
     func getVideo(_ videoURL: URL) {
-//        videoWebView.loadRequest(URLRequest(url: videoURL))
         videoWebKit.load(URLRequest(url: videoURL))
     }
     

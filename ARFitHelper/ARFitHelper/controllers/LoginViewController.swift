@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginButtonPress(_ sender: Any) {
-        
+       
         if validLogin(loginTextField.text) && validPassword(passwordTextField.text) {
             
             let login = loginTextField.text!
@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
             if(!login.isEmpty && !password.isEmpty) {
               Auth.auth().signIn(withEmail: login, password: password) { (result, error) in
                   if error == nil {
+                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
                     let startingPage: UIStoryboard = UIStoryboard(name: "StartPage", bundle: nil)
                     let mainViewController = startingPage.instantiateViewController(withIdentifier: "MainPageID") as! MainPageTabBarController
                     self.present(mainViewController, animated: true)
@@ -50,6 +51,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func logOutButtonPress(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
         let registerPage = UIStoryboard(name: "Register", bundle: Bundle.main)
         let registerViewController = registerPage.instantiateViewController(identifier: "RegisterViewControllerID") as! RegisterViewController
         self.present(registerViewController, animated: true)

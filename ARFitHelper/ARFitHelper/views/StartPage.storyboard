@@ -16,14 +16,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="uIW-o2-hTc" kind="relationship" relationship="viewControllers" id="303-YQ-r8d"/>
+                        <segue destination="3Lx-UO-m3O" kind="relationship" relationship="viewControllers" id="303-YQ-r8d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lc5-Iy-jwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1203" y="-246"/>
         </scene>
-        <!--Manual-->
+        <!--Manual Table View Controller-->
         <scene sceneID="b20-VB-rRu">
             <objects>
                 <tableViewController storyboardIdentifier="ManualID" modalPresentationStyle="fullScreen" id="uIW-o2-hTc" customClass="ManualTableViewController" customModule="ARFitHelper" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,14 +59,33 @@
                             <outlet property="delegate" destination="uIW-o2-hTc" id="x2b-sv-mWT"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Manual" image="book" catalog="system" selectedImage="book" id="Qm7-eh-DvN"/>
+                    <navigationItem key="navigationItem" id="GdM-tE-h01"/>
                     <connections>
                         <outlet property="myTableView" destination="Yzq-BU-HtN" id="94h-fj-08V"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsZ-32-bMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130" y="-596"/>
+            <point key="canvasLocation" x="779.71014492753625" y="-596.65178571428567"/>
+        </scene>
+        <!--Manual-->
+        <scene sceneID="dg9-yo-zGg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Lx-UO-m3O" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Manual" image="book" catalog="system" selectedImage="book" id="Qm7-eh-DvN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Wk-NJ-4dd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uIW-o2-hTc" kind="relationship" relationship="rootViewController" id="jNS-k5-F4p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IGW-pc-ZQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130.43478260869566" y="-596.65178571428567"/>
         </scene>
     </scenes>
     <resources>
