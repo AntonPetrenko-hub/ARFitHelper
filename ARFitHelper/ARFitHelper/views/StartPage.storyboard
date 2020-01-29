@@ -20,11 +20,52 @@
                         <segue destination="3Lx-UO-m3O" kind="relationship" relationship="viewControllers" id="303-YQ-r8d"/>
                         <segue destination="Pu3-B6-bQD" kind="relationship" relationship="viewControllers" id="2Ii-wp-3nm"/>
                         <segue destination="aft-jP-xpd" kind="relationship" relationship="viewControllers" id="HIN-n8-5OD"/>
+                        <segue destination="Cbx-tf-ehd" kind="relationship" relationship="viewControllers" id="fc5-pQ-3SH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lc5-Iy-jwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1203" y="-246"/>
+        </scene>
+        <!--Start training-->
+        <scene sceneID="fpb-5q-EKb">
+            <objects>
+                <viewController id="Cbx-tf-ehd" customClass="StartTrainingViewController" customModule="ARFitHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFill" id="hxI-nl-lpC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to begin your training?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMq-q2-xe9">
+                                <rect key="frame" x="20" y="244" width="374" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                <color key="textColor" red="0.9584877343" green="0.94223588820000004" blue="0.32994562630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAv-CH-MIR">
+                                <rect key="frame" x="96" y="361" width="223" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" red="0.9584877343" green="0.94223588820000004" blue="0.32994562630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="beginButtonPress:" destination="Cbx-tf-ehd" eventType="touchUpInside" id="MR8-oS-L53"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dMq-q2-xe9" firstAttribute="leading" secondItem="BcI-1K-uEY" secondAttribute="leading" constant="20" id="40F-jW-iQ1"/>
+                            <constraint firstItem="dMq-q2-xe9" firstAttribute="top" secondItem="BcI-1K-uEY" secondAttribute="top" constant="200" id="Tse-Nq-wm8"/>
+                            <constraint firstAttribute="trailing" secondItem="dMq-q2-xe9" secondAttribute="trailing" constant="20" id="iTp-gh-rSd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BcI-1K-uEY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Start training" image="play.fill" catalog="system" id="feW-Ek-eoU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tnn-kX-Fdg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2118.840579710145" y="557.8125"/>
         </scene>
         <!--Add exercise-->
         <scene sceneID="OBt-t0-acU">
@@ -271,6 +312,7 @@
     </scenes>
     <resources>
         <image name="book" catalog="system" width="64" height="50"/>
+        <image name="play.fill" catalog="system" width="58" height="64"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <image name="tray.fill" catalog="system" width="64" height="44"/>
     </resources>

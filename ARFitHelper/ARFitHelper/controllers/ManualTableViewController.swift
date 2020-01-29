@@ -132,7 +132,6 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
         }
         self.tableView.reloadData()
         })
-        
     }
 
 }

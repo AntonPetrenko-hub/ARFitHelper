@@ -26,10 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func addFewExercises() {
            let ref = Database.database().reference().child("exercises")
-           ref.child("bench-press").setValue(["exercisename": "bench-press", "kind": "basic", "targetingMusclesGroup": "chest", "synergistsMusclesGroup": "triceps", "technic": "lie and work hard lie and work hard lie and work hard lie and work hard lie and work hard", "videoURL": "https://youtu.be/sbB_0N_AfHg"])
-           ref.child("boom pressure on the inclined bench").setValue(["exercisename": "boom pressure on the inclined bench", "kind": "basic", "targetingMusclesGroup": "big pectoral, small pectoral", "synergistsMusclesGroup": "triceps", "technic": "lie and work hard on the inclined bench", "videoURL": "https://youtu.be/_Wqq1D8FHKI"])
-           ref.child("lying bench-press with free weights").setValue(["exercisename": "lying bench-press with free weights", "kind": "basic", "targetingMusclesGroup": "big pectoral, small pectoral", "synergistsMusclesGroup": "triceps", "technic": "lie and work hard on the bench with free weights", "videoURL": "https://youtu.be/n48eoyd53kk"])
-           ref.child("test").setValue(["exercisename": "test", "kind": "test", "targetingMusclesGroup": "test", "synergistsMusclesGroup": "test", "technic": "test", "videoURL": "https://youtu.be/n48eoyd53kk"])
+//           ref.child("bench-press").setValue(["exercisename": "bench-press", "kind": "basic", "targetingMusclesGroup": "chest", "synergistsMusclesGroup": "triceps", "technic": "lie and work hard lie and work hard lie and work hard lie and work hard lie and work hard", "videoURL": "https://youtu.be/sbB_0N_AfHg"])
+//           ref.child("boom pressure on the inclined bench").setValue(["exercisename": "boom pressure on the inclined bench", "kind": "basic", "targetingMusclesGroup": "big pectoral, small pectoral", "synergistsMusclesGroup": "triceps", "technic": "lie and work hard on the inclined bench", "videoURL": "https://youtu.be/_Wqq1D8FHKI"])
+//           ref.child("lying bench-press with free weights").setValue(["exercisename": "lying bench-press with free weights", "kind": "basic", "targetingMusclesGroup": "big pectoral, small pectoral", "synergistsMusclesGroup": "triceps", "technic": "lie and work hard on the bench with free weights", "videoURL": "https://youtu.be/n48eoyd53kk"])
+//           ref.child("test").setValue(["exercisename": "test", "kind": "test", "targetingMusclesGroup": "test", "synergistsMusclesGroup": "test", "technic": "test", "videoURL": "https://youtu.be/n48eoyd53kk"])
        }
     
     // MARK: UISceneSession Lifecycle

@@ -12,6 +12,8 @@
 		FD280B0023D795310024698D /* ManualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD280AFE23D795310024698D /* ManualTableViewCell.swift */; };
 		FD280B0123D795310024698D /* ManualTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD280AFF23D795310024698D /* ManualTableViewCell.xib */; };
 		FD5AAA7523E1D70100330873 /* AddingExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5AAA7423E1D70100330873 /* AddingExerciseViewController.swift */; };
+		FD5AAA7723E1F29B00330873 /* StartTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5AAA7623E1F29B00330873 /* StartTrainingViewController.swift */; };
+		FD5AAA7923E2015800330873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5AAA7823E2015800330873 /* Assets.xcassets */; };
 		FD7C72A923E0A28900FA49EF /* ChosenExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7C72A823E0A28900FA49EF /* ChosenExercisesTableViewController.swift */; };
 		FD7C72AC23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */; };
 		FD7C72AD23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7C72AB23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib */; };
@@ -23,7 +25,6 @@
 		FDCA8F5323D0ED17002D12E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F5223D0ED17002D12E8 /* ViewController.swift */; };
 		FDCA8F5623D0ED17002D12E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F5423D0ED17002D12E8 /* Main.storyboard */; };
 		FDCA8F5923D0ED17002D12E8 /* ARFitHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F5723D0ED17002D12E8 /* ARFitHelper.xcdatamodeld */; };
-		FDCA8F5B23D0ED1A002D12E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */; };
 		FDCA8F5E23D0ED1A002D12E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA8F5C23D0ED1A002D12E8 /* LaunchScreen.storyboard */; };
 		FDCA8F6A23D1013B002D12E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */; };
 		FDCA8F6C23D1021E002D12E8 /* logCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8F6B23D1021E002D12E8 /* logCheck.swift */; };
@@ -42,6 +43,8 @@
 		FD280AFE23D795310024698D /* ManualTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTableViewCell.swift; sourceTree = "<group>"; };
 		FD280AFF23D795310024698D /* ManualTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualTableViewCell.xib; sourceTree = "<group>"; };
 		FD5AAA7423E1D70100330873 /* AddingExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingExerciseViewController.swift; sourceTree = "<group>"; };
+		FD5AAA7623E1F29B00330873 /* StartTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrainingViewController.swift; sourceTree = "<group>"; };
+		FD5AAA7823E2015800330873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD7C72A823E0A28900FA49EF /* ChosenExercisesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenExercisesTableViewController.swift; sourceTree = "<group>"; };
 		FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		FD7C72AB23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChosenExerciseTableViewCell.xib; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		FDCA8F5223D0ED17002D12E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDCA8F5523D0ED17002D12E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDCA8F5823D0ED17002D12E8 /* ARFitHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ARFitHelper.xcdatamodel; sourceTree = "<group>"; };
-		FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDCA8F5D23D0ED1A002D12E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDCA8F5F23D0ED1A002D12E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -146,11 +148,11 @@
 				FD280B0223D795670024698D /* models */,
 				FD280B0323D795770024698D /* controllers */,
 				FDCA8F6823D0FAE7002D12E8 /* views */,
-				FDCA8F5A23D0ED1A002D12E8 /* Assets.xcassets */,
 				FDCA8F5C23D0ED1A002D12E8 /* LaunchScreen.storyboard */,
 				FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */,
 				FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */,
 				FDCA8F5F23D0ED1A002D12E8 /* Info.plist */,
+				FD5AAA7823E2015800330873 /* Assets.xcassets */,
 				FDD1E30423D4F87B000698AA /* GoogleService-Info.plist */,
 				FDCA8F5723D0ED17002D12E8 /* ARFitHelper.xcdatamodeld */,
 			);
@@ -165,6 +167,7 @@
 				FD280AFF23D795310024698D /* ManualTableViewCell.xib */,
 				FDD1E30023D4ED2D000698AA /* Register.storyboard */,
 				FDCA8F6D23D10C67002D12E8 /* StartPage.storyboard */,
+				FD5AAA7623E1F29B00330873 /* StartTrainingViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -233,10 +236,10 @@
 				FD7C72AD23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib in Resources */,
 				FDCA8F5E23D0ED1A002D12E8 /* LaunchScreen.storyboard in Resources */,
 				FD280B0123D795310024698D /* ManualTableViewCell.xib in Resources */,
-				FDCA8F5B23D0ED1A002D12E8 /* Assets.xcassets in Resources */,
 				FDCA8F6E23D10C67002D12E8 /* StartPage.storyboard in Resources */,
 				FDCA8F5623D0ED17002D12E8 /* Main.storyboard in Resources */,
 				FDD1E30123D4ED2D000698AA /* Register.storyboard in Resources */,
+				FD5AAA7923E2015800330873 /* Assets.xcassets in Resources */,
 				FDD1E30523D4F87B000698AA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +308,7 @@
 				FDCA8F6C23D1021E002D12E8 /* logCheck.swift in Sources */,
 				FD9D5AE723DA295F006D06E9 /* DetailedManualViewController.swift in Sources */,
 				FD7C72AC23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift in Sources */,
+				FD5AAA7723E1F29B00330873 /* StartTrainingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
