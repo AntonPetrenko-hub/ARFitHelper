@@ -19,10 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if UserDefaults.standard.bool(forKey: "isLoggedIn") == true {
             let storyboard = UIStoryboard(name: "StartPage", bundle: Bundle.main)
-            window?.rootViewController = storyboard.instantiateViewController(identifier: "MainPageID") as! ManualTableViewController
+            let initialVC = storyboard.instantiateViewController(identifier: "MainPageID") as! MainPageTabBarController
+            window?.rootViewController = initialVC
         } else {
             let storyboard = UIStoryboard(name: "Register", bundle: Bundle.main)
-            window?.rootViewController = storyboard.instantiateViewController(identifier: "RegisterViewControllerID") as! RegisterViewController
+            let initialVC = storyboard.instantiateViewController(identifier: "RegisterViewControllerID") as! RegisterViewController
+            window?.rootViewController = initialVC
         }
 
         

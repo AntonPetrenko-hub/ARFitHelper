@@ -11,6 +11,10 @@
 		FD280AFD23D78B140024698D /* ManualTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD280AFC23D78B140024698D /* ManualTableViewController.swift */; };
 		FD280B0023D795310024698D /* ManualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD280AFE23D795310024698D /* ManualTableViewCell.swift */; };
 		FD280B0123D795310024698D /* ManualTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD280AFF23D795310024698D /* ManualTableViewCell.xib */; };
+		FD5AAA7523E1D70100330873 /* AddingExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5AAA7423E1D70100330873 /* AddingExerciseViewController.swift */; };
+		FD7C72A923E0A28900FA49EF /* ChosenExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7C72A823E0A28900FA49EF /* ChosenExercisesTableViewController.swift */; };
+		FD7C72AC23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */; };
+		FD7C72AD23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7C72AB23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib */; };
 		FD7D894223D8F31600130C4F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7D894123D8F31600130C4F /* Exercise.swift */; };
 		FD9D5AE523DA28F9006D06E9 /* DetailedExercise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD9D5AE423DA28F9006D06E9 /* DetailedExercise.storyboard */; };
 		FD9D5AE723DA295F006D06E9 /* DetailedManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D5AE623DA295F006D06E9 /* DetailedManualViewController.swift */; };
@@ -37,6 +41,10 @@
 		FD280AFC23D78B140024698D /* ManualTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTableViewController.swift; sourceTree = "<group>"; };
 		FD280AFE23D795310024698D /* ManualTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTableViewCell.swift; sourceTree = "<group>"; };
 		FD280AFF23D795310024698D /* ManualTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualTableViewCell.xib; sourceTree = "<group>"; };
+		FD5AAA7423E1D70100330873 /* AddingExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingExerciseViewController.swift; sourceTree = "<group>"; };
+		FD7C72A823E0A28900FA49EF /* ChosenExercisesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenExercisesTableViewController.swift; sourceTree = "<group>"; };
+		FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		FD7C72AB23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChosenExerciseTableViewCell.xib; sourceTree = "<group>"; };
 		FD7D894123D8F31600130C4F /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		FD9D5AE423DA28F9006D06E9 /* DetailedExercise.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailedExercise.storyboard; sourceTree = "<group>"; };
 		FD9D5AE623DA295F006D06E9 /* DetailedManualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedManualViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				FD7D894123D8F31600130C4F /* Exercise.swift */,
-				FD9D5AE623DA295F006D06E9 /* DetailedManualViewController.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -99,13 +106,18 @@
 		FD280B0323D795770024698D /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD9D5AE623DA295F006D06E9 /* DetailedManualViewController.swift */,
 				FDCA8F6B23D1021E002D12E8 /* logCheck.swift */,
 				FD280AFC23D78B140024698D /* ManualTableViewController.swift */,
 				FDCA8F6F23D10E1A002D12E8 /* MainPageTabBarController.swift */,
+				FD5AAA7423E1D70100330873 /* AddingExerciseViewController.swift */,
 				FDD1E30223D4F357000698AA /* RegisterViewController.swift */,
+				FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */,
+				FD7C72AB23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib */,
+				FD7C72A823E0A28900FA49EF /* ChosenExercisesTableViewController.swift */,
 				FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */,
 				FDCA8F5223D0ED17002D12E8 /* ViewController.swift */,
-				FD9D5AE423DA28F9006D06E9 /* DetailedExercise.storyboard */,
+				FD280AFE23D795310024698D /* ManualTableViewCell.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -148,8 +160,8 @@
 		FDCA8F6823D0FAE7002D12E8 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				FD9D5AE423DA28F9006D06E9 /* DetailedExercise.storyboard */,
 				FDCA8F5423D0ED17002D12E8 /* Main.storyboard */,
-				FD280AFE23D795310024698D /* ManualTableViewCell.swift */,
 				FD280AFF23D795310024698D /* ManualTableViewCell.xib */,
 				FDD1E30023D4ED2D000698AA /* Register.storyboard */,
 				FDCA8F6D23D10C67002D12E8 /* StartPage.storyboard */,
@@ -218,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD9D5AE523DA28F9006D06E9 /* DetailedExercise.storyboard in Resources */,
+				FD7C72AD23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib in Resources */,
 				FDCA8F5E23D0ED1A002D12E8 /* LaunchScreen.storyboard in Resources */,
 				FD280B0123D795310024698D /* ManualTableViewCell.xib in Resources */,
 				FDCA8F5B23D0ED1A002D12E8 /* Assets.xcassets in Resources */,
@@ -278,17 +291,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDCA8F5323D0ED17002D12E8 /* ViewController.swift in Sources */,
+				FD5AAA7523E1D70100330873 /* AddingExerciseViewController.swift in Sources */,
 				FDCA8F4F23D0ED17002D12E8 /* AppDelegate.swift in Sources */,
 				FDCA8F5923D0ED17002D12E8 /* ARFitHelper.xcdatamodeld in Sources */,
 				FD280B0023D795310024698D /* ManualTableViewCell.swift in Sources */,
 				FDD1E30323D4F357000698AA /* RegisterViewController.swift in Sources */,
 				FDCA8F7023D10E1A002D12E8 /* MainPageTabBarController.swift in Sources */,
 				FD7D894223D8F31600130C4F /* Exercise.swift in Sources */,
+				FD7C72A923E0A28900FA49EF /* ChosenExercisesTableViewController.swift in Sources */,
 				FDCA8F6A23D1013B002D12E8 /* LoginViewController.swift in Sources */,
 				FD280AFD23D78B140024698D /* ManualTableViewController.swift in Sources */,
 				FDCA8F5123D0ED17002D12E8 /* SceneDelegate.swift in Sources */,
 				FDCA8F6C23D1021E002D12E8 /* logCheck.swift in Sources */,
 				FD9D5AE723DA295F006D06E9 /* DetailedManualViewController.swift in Sources */,
+				FD7C72AC23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

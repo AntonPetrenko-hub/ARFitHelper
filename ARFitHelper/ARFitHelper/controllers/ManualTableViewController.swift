@@ -19,15 +19,15 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
     
     @IBOutlet var myTableView: UITableView!
     
-    var exercises = [Exercise]()
-//        [Exercise(name: "bench-press", kind: "basic", targetingMuscles: "chest", synergistsMuscles: "triceps", technic: "lie and work hard", videoURL: "https://youtu.be/sbB_0N_AfHg"), Exercise(name: "boom pressure on the inclined bench", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the inclined bench", videoURL: "https://youtu.be/_Wqq1D8FHKI"), Exercise(name: "lying bench-press with free weights", kind: "basic", targetingMuscles: "big pectoral, small pectoral", synergistsMuscles: "triceps", technic: "lie and work hard on the bench with free weights", videoURL: "https://youtu.be/n48eoyd53kk")]
+//    var exercises = [Exercise]()
+    var selectedExercises = [Exercise]()
     
     var filteredTableData = [Exercise]()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "therock1.png")!)
         getDataFromDatabase()
         
         myTableView.dataSource = self
@@ -51,6 +51,12 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
         tableView.reloadData()
        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -65,7 +71,9 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ManualCellID", for: indexPath) as! ManualTableViewCell
-        
+        cell.backgroundColor = #colorLiteral(red: 0.8727599978, green: 0.8838961124, blue: 0.8835354447, alpha: 1)
+//        cell.backgroundView = UIImageView(image: UIImage(named: "lines.png")!)
+//        cell.backgroundView?.contentMode = .
         
         if (resultSearchController.isActive) {
             
@@ -81,7 +89,7 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        resultSearchController.isActive = false
         let page: UIStoryboard = UIStoryboard(name: "DetailedExercise", bundle: Bundle.main)
         let viewController = page.instantiateViewController(withIdentifier: "DetailedManualID") as! DetailedManualViewController
         viewController.exc = exercises[indexPath.row]
@@ -120,7 +128,7 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
         if let dict = exerciseFromDB as? [AnyHashable: Any]{
             let exc = Exercise(name: dict["exercisename"] as? String ?? ""
 , kind: dict["kind"] as? String ?? "", targetingMuscles: dict["targetingMusclesGroup"] as? String ?? "", synergistsMuscles: dict["synergistsMusclesGroup"] as? String ?? "", technic: dict["technic"] as? String ?? "", videoURL: dict["videoURL"] as? String ?? "")
-            self.exercises.append(exc)
+            exercises.append(exc)
         }
         self.tableView.reloadData()
         })
