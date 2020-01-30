@@ -12,7 +12,7 @@ class StartTrainingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "morepullup.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "beginning1.png")!)
         // Do any additional setup after loading the view.
     }
     

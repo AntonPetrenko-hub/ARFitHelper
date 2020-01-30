@@ -98,6 +98,7 @@ extension Exercise {
 
 var chosenExercises = Exercise.loadExercises() {
     didSet {
+//        chosenExercises.removeAll()
         Exercise.save(chosenExercises)
     }
 }

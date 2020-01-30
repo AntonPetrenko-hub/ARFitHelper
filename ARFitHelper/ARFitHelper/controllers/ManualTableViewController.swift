@@ -93,7 +93,9 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ManualCellID", for: indexPath) as! ManualTableViewCell
-        cell.backgroundColor = #colorLiteral(red: 0.8727599978, green: 0.8838961124, blue: 0.8835354447, alpha: 1)
+        
+
+//        cell.backgroundColor = #colorLiteral(red: 0.8727599978, green: 0.8838961124, blue: 0.8835354447, alpha: 1)
 //        cell.backgroundView = UIImageView(image: UIImage(named: "lines.png")!)
 //        cell.backgroundView?.contentMode = .
         

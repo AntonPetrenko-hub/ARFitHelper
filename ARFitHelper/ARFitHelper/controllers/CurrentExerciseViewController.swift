@@ -23,6 +23,8 @@ class CurrentExerciseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // bug with empty array of chosen exercises
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "sexypump1.png")!)
         pickerView.dataSource = self
         pickerView.delegate = self
         excNameLabel.text = "Name: " + chosenExercises[excCounter].name

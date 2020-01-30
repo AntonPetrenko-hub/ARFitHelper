@@ -34,7 +34,9 @@ class ChosenExercisesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
          let cell = tableView.dequeueReusableCell(withIdentifier: "DetailExerciseID", for: indexPath) as! ChosenExerciseTableViewCell
-                cell.backgroundColor = #colorLiteral(red: 0.8727599978, green: 0.8838961124, blue: 0.8835354447, alpha: 1)
+//                cell.backgroundColor = #colorLiteral(red: 0.8727599978, green: 0.8838961124, blue: 0.8835354447, alpha: 1)
+        cell.backgroundColor = UIColor(patternImage: UIImage(named: "cellbg4.png")!)
+
                
                 cell.configure(chosenExercises[indexPath.row])
         
