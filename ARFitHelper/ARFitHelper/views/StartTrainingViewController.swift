@@ -17,9 +17,9 @@ class StartTrainingViewController: UIViewController {
     }
     
     @IBAction func beginButtonPress(_ sender: UIButton) {
-//        let startingPage: UIStoryboard = UIStoryboard(name: "StartPage", bundle: nil)
-//        let mainViewController = startingPage.instantiateViewController(withIdentifier: "MainPageID") as! MainPageTabBarController
-//        self.present(mainViewController, animated: true)
+        let startingPage: UIStoryboard = UIStoryboard(name: "ExerciseSet", bundle: nil)
+        let mainViewController = startingPage.instantiateViewController(withIdentifier: "ExerciseSetID") as! ExerciseSetViewController
+        self.present(mainViewController, animated: true)
     }
     
     
