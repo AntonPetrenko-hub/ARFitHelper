@@ -25,7 +25,6 @@ class CurrentExerciseViewController: UIViewController {
         super.viewDidLoad()
         pickerView.dataSource = self
         pickerView.delegate = self
-        
         excNameLabel.text = "Name: " + chosenExercises[excCounter].name
         excCurAttemptLabel.text = "Attempt: " + String(attemptCounter)
 

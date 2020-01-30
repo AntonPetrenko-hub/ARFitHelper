@@ -128,12 +128,11 @@
 				FDD1E30223D4F357000698AA /* RegisterViewController.swift */,
 				FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */,
 				FD5AAA8023E2205B00330873 /* LaunchView.swift */,
-				FD464E5A23E2DFD6006D3217 /* CurrentExrcise.storyboard */,
-				FD7C72AB23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib */,
 				FD7C72A823E0A28900FA49EF /* ChosenExercisesTableViewController.swift */,
 				FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */,
 				FDCA8F5223D0ED17002D12E8 /* ViewController.swift */,
 				FD280AFE23D795310024698D /* ManualTableViewCell.swift */,
+				FD5AAA7623E1F29B00330873 /* StartTrainingViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -162,7 +161,6 @@
 				FD280B0223D795670024698D /* models */,
 				FD280B0323D795770024698D /* controllers */,
 				FDCA8F6823D0FAE7002D12E8 /* views */,
-				FDCA8F5C23D0ED1A002D12E8 /* LaunchScreen.storyboard */,
 				FDCA8F4E23D0ED17002D12E8 /* AppDelegate.swift */,
 				FDCA8F5023D0ED17002D12E8 /* SceneDelegate.swift */,
 				FDCA8F5F23D0ED1A002D12E8 /* Info.plist */,
@@ -176,13 +174,15 @@
 		FDCA8F6823D0FAE7002D12E8 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				FD464E5A23E2DFD6006D3217 /* CurrentExrcise.storyboard */,
+				FD7C72AB23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib */,
 				FD5AAA7A23E2110800330873 /* ExerciseSet.storyboard */,
 				FD9D5AE423DA28F9006D06E9 /* DetailedExercise.storyboard */,
 				FDCA8F5423D0ED17002D12E8 /* Main.storyboard */,
 				FD280AFF23D795310024698D /* ManualTableViewCell.xib */,
 				FDD1E30023D4ED2D000698AA /* Register.storyboard */,
 				FDCA8F6D23D10C67002D12E8 /* StartPage.storyboard */,
-				FD5AAA7623E1F29B00330873 /* StartTrainingViewController.swift */,
+				FDCA8F5C23D0ED1A002D12E8 /* LaunchScreen.storyboard */,
 			);
 			path = views;
 			sourceTree = "<group>";

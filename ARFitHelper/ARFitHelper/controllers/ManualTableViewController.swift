@@ -13,6 +13,7 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
     
     var databaseReference: DatabaseReference?
     var databaseHandle: DatabaseHandle?
+
     var newExc: Exercise?
         
     var resultSearchController = UISearchController()
@@ -27,14 +28,17 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "therock1.png")!)
-        getDataFromDatabase()
-        
+        if oneTime == true {
+            getDataFromDatabase()
+            oneTime = false
+        }
+       
         myTableView.dataSource = self
         myTableView.delegate = self
         let nib = UINib(nibName: "ManualTableViewCell", bundle: nil)
         myTableView.register(nib, forCellReuseIdentifier: "ManualCellID")
         
+
        // MARK: Configure search bar
         
         resultSearchController = ({
@@ -57,6 +61,24 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
         
         tableView.reloadData()
     }
+    
+    func getDataFromDatabase() {
+              
+                databaseReference = Database.database().reference()
+                
+               databaseHandle = databaseReference?.child("exercises").observe(.childAdded, with: { (snapshot) in
+                
+                let exerciseFromDB = snapshot.value
+             
+                if let dict = exerciseFromDB as? [AnyHashable: Any]{
+                    let exc = Exercise(name: dict["exercisename"] as? String ?? ""
+        , kind: dict["kind"] as? String ?? "", targetingMuscles: dict["targetingMusclesGroup"] as? String ?? "", synergistsMuscles: dict["synergistsMusclesGroup"] as? String ?? "", technic: dict["technic"] as? String ?? "", videoURL: dict["videoURL"] as? String ?? "")
+                    
+                    exercises.append(exc)
+                }
+                self.myTableView.reloadData()
+                })
+            }
 
     // MARK: - Table view data source
 
@@ -117,22 +139,7 @@ class ManualTableViewController: UITableViewController, UISearchResultsUpdating 
         self.tableView.reloadData()
     }
     
-    func getDataFromDatabase() {
-        
-        databaseReference = Database.database().reference()
-        
-       databaseHandle = databaseReference?.child("exercises").observe(.childAdded, with: { (snapshot) in
-        
-        let exerciseFromDB = snapshot.value
-     
-        if let dict = exerciseFromDB as? [AnyHashable: Any]{
-            let exc = Exercise(name: dict["exercisename"] as? String ?? ""
-, kind: dict["kind"] as? String ?? "", targetingMuscles: dict["targetingMusclesGroup"] as? String ?? "", synergistsMuscles: dict["synergistsMusclesGroup"] as? String ?? "", technic: dict["technic"] as? String ?? "", videoURL: dict["videoURL"] as? String ?? "")
-            exercises.append(exc)
-        }
-        self.tableView.reloadData()
-        })
-    }
+  
 
 }
 

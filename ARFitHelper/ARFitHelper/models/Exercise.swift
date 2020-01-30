@@ -104,5 +104,6 @@ var chosenExercises = Exercise.loadExercises() {
 
 var exercises = [Exercise]()
 
+var oneTime = true
 
 //[Exercise(name: "Cardio", kind: "basic", targetingMuscles: "heart", synergistsMuscles: "body", technic: "run", videoURL: "https://youtu.be/A66_4_4eyVg")]
