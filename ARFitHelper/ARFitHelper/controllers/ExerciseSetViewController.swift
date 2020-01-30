@@ -6,11 +6,13 @@
 //  Copyright © 2020 Антон Петренко. All rights reserved.
 //
 
+   var totalnum: Int = 0
+
 import UIKit
 
 class ExerciseSetViewController: UIViewController {
     
-    var totalnum: Int = 0
+ 
     
     var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     
@@ -23,18 +25,13 @@ class ExerciseSetViewController: UIViewController {
         pickerView.dataSource = self
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextButtonTap(_ sender: Any) {
+        let startingPage: UIStoryboard = UIStoryboard(name: "CurrentExrcise", bundle: Bundle.main)
+        let mainViewController = startingPage.instantiateViewController(withIdentifier: "CurrExcID") as! CurrentExerciseViewController
+        self.present(mainViewController, animated: true)
     }
-    */
-
+    
 }
 
 extension ExerciseSetViewController: UIPickerViewDelegate, UIPickerViewDataSource {

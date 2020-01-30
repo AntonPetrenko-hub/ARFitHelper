@@ -12,6 +12,7 @@
 		FD280B0023D795310024698D /* ManualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD280AFE23D795310024698D /* ManualTableViewCell.swift */; };
 		FD280B0123D795310024698D /* ManualTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD280AFF23D795310024698D /* ManualTableViewCell.xib */; };
 		FD464E5B23E2DFD6006D3217 /* CurrentExrcise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD464E5A23E2DFD6006D3217 /* CurrentExrcise.storyboard */; };
+		FD464E5D23E2E046006D3217 /* CurrentExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD464E5C23E2E046006D3217 /* CurrentExerciseViewController.swift */; };
 		FD5AAA7523E1D70100330873 /* AddingExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5AAA7423E1D70100330873 /* AddingExerciseViewController.swift */; };
 		FD5AAA7723E1F29B00330873 /* StartTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5AAA7623E1F29B00330873 /* StartTrainingViewController.swift */; };
 		FD5AAA7923E2015800330873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5AAA7823E2015800330873 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		FD280AFE23D795310024698D /* ManualTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTableViewCell.swift; sourceTree = "<group>"; };
 		FD280AFF23D795310024698D /* ManualTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManualTableViewCell.xib; sourceTree = "<group>"; };
 		FD464E5A23E2DFD6006D3217 /* CurrentExrcise.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentExrcise.storyboard; sourceTree = "<group>"; };
+		FD464E5C23E2E046006D3217 /* CurrentExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentExerciseViewController.swift; sourceTree = "<group>"; };
 		FD5AAA7423E1D70100330873 /* AddingExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingExerciseViewController.swift; sourceTree = "<group>"; };
 		FD5AAA7623E1F29B00330873 /* StartTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrainingViewController.swift; sourceTree = "<group>"; };
 		FD5AAA7823E2015800330873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				FDCA8F6F23D10E1A002D12E8 /* MainPageTabBarController.swift */,
 				FD5AAA7423E1D70100330873 /* AddingExerciseViewController.swift */,
 				FD5AAA7C23E2112100330873 /* ExerciseSetViewController.swift */,
+				FD464E5C23E2E046006D3217 /* CurrentExerciseViewController.swift */,
 				FDD1E30223D4F357000698AA /* RegisterViewController.swift */,
 				FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */,
 				FD5AAA8023E2205B00330873 /* LaunchView.swift */,
@@ -318,6 +321,7 @@
 				FDCA8F7023D10E1A002D12E8 /* MainPageTabBarController.swift in Sources */,
 				FD7D894223D8F31600130C4F /* Exercise.swift in Sources */,
 				FD7C72A923E0A28900FA49EF /* ChosenExercisesTableViewController.swift in Sources */,
+				FD464E5D23E2E046006D3217 /* CurrentExerciseViewController.swift in Sources */,
 				FDCA8F6A23D1013B002D12E8 /* LoginViewController.swift in Sources */,
 				FD280AFD23D78B140024698D /* ManualTableViewController.swift in Sources */,
 				FDCA8F5123D0ED17002D12E8 /* SceneDelegate.swift in Sources */,

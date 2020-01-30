@@ -1,7 +1,70 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Current Exercise View Controller-->
+        <scene sceneID="Q8C-3b-U7E">
+            <objects>
+                <viewController storyboardIdentifier="CurrExcID" modalPresentationStyle="fullScreen" id="Onn-Wg-P12" customClass="CurrentExerciseViewController" customModule="ARFitHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5xi-hQ-ZCH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkh-aF-oHF">
+                                <rect key="frame" x="20" y="64" width="71" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current attempt:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtb-ko-8ex">
+                                <rect key="frame" x="20" y="110" width="188" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dor-q3-8zg">
+                                <rect key="frame" x="0.0" y="197" width="414" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-WE-RA9">
+                                <rect key="frame" x="177" y="495" width="67" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishButtonDidTap:" destination="Onn-Wg-P12" eventType="touchUpInside" id="j6I-OU-5b3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xtb-ko-8ex" firstAttribute="top" secondItem="Kkh-aF-oHF" secondAttribute="bottom" constant="19.5" id="6Dj-RH-G1U"/>
+                            <constraint firstItem="xtb-ko-8ex" firstAttribute="leading" secondItem="koz-22-KdT" secondAttribute="leading" constant="20" id="76R-lq-d2S"/>
+                            <constraint firstItem="fuZ-WE-RA9" firstAttribute="leading" secondItem="koz-22-KdT" secondAttribute="leading" constant="177" id="CU1-BT-Jz7"/>
+                            <constraint firstItem="dor-q3-8zg" firstAttribute="top" secondItem="xtb-ko-8ex" secondAttribute="bottom" constant="60" id="Fb2-jz-XIj"/>
+                            <constraint firstItem="Kkh-aF-oHF" firstAttribute="leading" secondItem="koz-22-KdT" secondAttribute="leading" constant="20" id="I1R-rg-SK2"/>
+                            <constraint firstItem="dor-q3-8zg" firstAttribute="leading" secondItem="koz-22-KdT" secondAttribute="leading" id="Pf3-Nd-IA1"/>
+                            <constraint firstItem="fuZ-WE-RA9" firstAttribute="top" secondItem="dor-q3-8zg" secondAttribute="bottom" constant="82" id="TON-Lm-omt"/>
+                            <constraint firstItem="dor-q3-8zg" firstAttribute="trailing" secondItem="koz-22-KdT" secondAttribute="trailing" id="Ygz-eP-rkE"/>
+                            <constraint firstItem="Kkh-aF-oHF" firstAttribute="top" secondItem="koz-22-KdT" secondAttribute="top" constant="20" id="abN-fy-kk3"/>
+                            <constraint firstItem="dor-q3-8zg" firstAttribute="centerX" secondItem="koz-22-KdT" secondAttribute="centerX" id="lfX-10-623"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="koz-22-KdT"/>
+                    </view>
+                    <connections>
+                        <outlet property="excCurAttemptLabel" destination="xtb-ko-8ex" id="9w2-bc-8Jc"/>
+                        <outlet property="excNameLabel" destination="Kkh-aF-oHF" id="fS0-Yo-iPP"/>
+                        <outlet property="pickerView" destination="dor-q3-8zg" id="YIR-es-cJ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4n-JF-7cT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="43"/>
+        </scene>
+    </scenes>
 </document>
