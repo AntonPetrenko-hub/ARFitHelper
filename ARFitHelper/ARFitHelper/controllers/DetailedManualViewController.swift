@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class DetailedManualViewController: UIViewController {
+class DetailedManualViewController: UIViewController{
 
     var exc: Exercise?
     
@@ -24,13 +24,14 @@ class DetailedManualViewController: UIViewController {
     
     @IBOutlet weak var technicLabel: UILabel!
     
-    @IBOutlet weak var videoWebView: UIWebView!
+    @IBOutlet weak var webKit: WKWebView!
     
-    @IBOutlet weak var videoWebKit: WKWebView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         title = "Exercise"
         
         nameLabel.text = "Name: " + exc!.name
@@ -38,11 +39,26 @@ class DetailedManualViewController: UIViewController {
         targetingLabel.text = "Targeting: " + exc!.targetingMuscles
         synergistLabel.text = "Synergists: " + exc!.synergistsMuscles
         technicLabel.text = "Technic: " + exc!.technic
-        
+                
         getVideo(URL(string: exc!.videoURL)!)
+        
+        
+//        if videoWebKit.isLoading == true {
+//            activityLoader.startAnimating()
+//        }
+        
+//        if videoWebKit.isLoading == false {
+//            activityLoader.stopAnimating()
+//            activityLoader.removeFromSuperview()
+//        }
         
     }
     
+//    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+//        activityLoader.stopAnimating()
+//        activityLoader.removeFromSuperview()
+//    }
+
     
     @IBAction func backButtonPress(_ sender: Any) {
         let storyboard = UIStoryboard(name: "StartPage", bundle: Bundle.main)
@@ -51,10 +67,13 @@ class DetailedManualViewController: UIViewController {
     }
     
     func getVideo(_ videoURL: URL) {
-        videoWebKit.load(URLRequest(url: videoURL))
+//        newVideoWebKit.load(URLRequest(url: videoURL))
+        webKit.load(URLRequest(url: videoURL))
     }
     
     func create(_ exercise: Exercise) {
         self.exc = exercise
     }
+    
+
 }

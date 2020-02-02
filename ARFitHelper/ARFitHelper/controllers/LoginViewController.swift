@@ -17,10 +17,16 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        lowLabel.text = " "
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lowLabel.text = ""
+        lowLabel.text = " "
  
     }
     

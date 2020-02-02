@@ -39,7 +39,6 @@ class ManualTableViewCell: UITableViewCell {
         alert.addAction(okAction)
 //        present(alert, animated: true, complition: nil)
         UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-
     }
     
 }

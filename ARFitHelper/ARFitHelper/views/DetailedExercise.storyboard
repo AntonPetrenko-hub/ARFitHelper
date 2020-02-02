@@ -45,8 +45,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2r4-3m-kpT">
-                                <rect key="frame" x="0.0" y="373.5" width="414" height="388.5"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieg-kO-bmT">
+                                <rect key="frame" x="0.0" y="373.5" width="414" height="288.5"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -59,24 +59,30 @@
                             <constraint firstItem="1zv-NA-QVB" firstAttribute="leading" secondItem="9ss-Xs-cZD" secondAttribute="leading" constant="20" id="1Cm-rW-2uO"/>
                             <constraint firstItem="Xdn-Yi-Hhw" firstAttribute="top" secondItem="7TF-n0-0g6" secondAttribute="bottom" constant="20" id="1RQ-fu-Uvx"/>
                             <constraint firstItem="7TF-n0-0g6" firstAttribute="leading" secondItem="9ss-Xs-cZD" secondAttribute="leading" constant="20" id="2mV-My-bfk"/>
+                            <constraint firstItem="9ss-Xs-cZD" firstAttribute="bottom" secondItem="ieg-kO-bmT" secondAttribute="bottom" constant="200" id="4qC-RS-8sC"/>
                             <constraint firstItem="9ss-Xs-cZD" firstAttribute="trailing" secondItem="bQb-9j-UMF" secondAttribute="trailing" constant="20" id="5D3-8W-1eJ"/>
-                            <constraint firstItem="2r4-3m-kpT" firstAttribute="leading" secondItem="9ss-Xs-cZD" secondAttribute="leading" id="9Rq-Qt-KXa"/>
                             <constraint firstItem="Xdn-Yi-Hhw" firstAttribute="leading" secondItem="9ss-Xs-cZD" secondAttribute="leading" constant="20" id="Cr7-iQ-DW2"/>
+                            <constraint firstItem="ieg-kO-bmT" firstAttribute="top" secondItem="Xdn-Yi-Hhw" secondAttribute="bottom" constant="20" id="SG0-Xu-BWk"/>
+                            <constraint firstItem="ieg-kO-bmT" firstAttribute="leading" secondItem="Xdn-Yi-Hhw" secondAttribute="trailing" constant="-394" id="UC7-MF-Lnv"/>
                             <constraint firstItem="9ss-Xs-cZD" firstAttribute="trailing" secondItem="7TF-n0-0g6" secondAttribute="trailing" constant="20" id="WuT-Lj-4bg"/>
+                            <constraint firstItem="ieg-kO-bmT" firstAttribute="leading" secondItem="9ss-Xs-cZD" secondAttribute="leading" id="Yuh-7T-svP"/>
                             <constraint firstItem="oD7-Cp-da3" firstAttribute="leading" secondItem="9ss-Xs-cZD" secondAttribute="leading" constant="20" id="dAO-Sc-EGQ"/>
-                            <constraint firstItem="9ss-Xs-cZD" firstAttribute="bottom" secondItem="2r4-3m-kpT" secondAttribute="bottom" constant="100" id="dyk-kt-eFP"/>
                             <constraint firstItem="bQb-9j-UMF" firstAttribute="leading" secondItem="9ss-Xs-cZD" secondAttribute="leading" constant="20" id="fNc-r3-5p9"/>
-                            <constraint firstItem="2r4-3m-kpT" firstAttribute="top" secondItem="Xdn-Yi-Hhw" secondAttribute="bottom" constant="20" id="jAe-Ki-b2E"/>
                             <constraint firstItem="oD7-Cp-da3" firstAttribute="top" secondItem="bQb-9j-UMF" secondAttribute="bottom" constant="20" id="k4c-xi-25R"/>
                             <constraint firstItem="1zv-NA-QVB" firstAttribute="top" secondItem="9ss-Xs-cZD" secondAttribute="top" constant="80" id="lLn-AN-QFi"/>
-                            <constraint firstItem="9ss-Xs-cZD" firstAttribute="trailing" secondItem="2r4-3m-kpT" secondAttribute="trailing" id="lLp-QU-F8v"/>
                             <constraint firstItem="bQb-9j-UMF" firstAttribute="top" secondItem="1zv-NA-QVB" secondAttribute="bottom" constant="20" id="mDB-5s-XJ6"/>
                             <constraint firstItem="9ss-Xs-cZD" firstAttribute="trailing" secondItem="Xdn-Yi-Hhw" secondAttribute="trailing" constant="20" id="mkh-g0-MlK"/>
                             <constraint firstItem="9ss-Xs-cZD" firstAttribute="trailing" secondItem="oD7-Cp-da3" secondAttribute="trailing" constant="20" id="odn-5T-8hC"/>
+                            <constraint firstItem="9ss-Xs-cZD" firstAttribute="trailing" secondItem="ieg-kO-bmT" secondAttribute="trailing" id="oig-Zy-yWl"/>
                             <constraint firstItem="7TF-n0-0g6" firstAttribute="top" secondItem="oD7-Cp-da3" secondAttribute="bottom" constant="20" id="tdv-kK-nvJ"/>
                             <constraint firstItem="9ss-Xs-cZD" firstAttribute="trailing" secondItem="1zv-NA-QVB" secondAttribute="trailing" constant="20" id="wfO-Er-yoW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9ss-Xs-cZD"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UC7-MF-Lnv"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="kindLabel" destination="bQb-9j-UMF" id="9ym-Wt-2w0"/>
@@ -84,8 +90,7 @@
                         <outlet property="synergistLabel" destination="7TF-n0-0g6" id="FFm-R0-6nh"/>
                         <outlet property="targetingLabel" destination="oD7-Cp-da3" id="0cg-MU-xul"/>
                         <outlet property="technicLabel" destination="Xdn-Yi-Hhw" id="0zG-LD-VeU"/>
-                        <outlet property="videoWebKit" destination="2r4-3m-kpT" id="Npb-aN-CSX"/>
-                        <outlet property="videoWebView" destination="2r4-3m-kpT" id="VFw-dX-t4E"/>
+                        <outlet property="webKit" destination="ieg-kO-bmT" id="uoc-Uv-RfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCk-0A-I22" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
