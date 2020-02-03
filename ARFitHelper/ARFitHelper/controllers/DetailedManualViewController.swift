@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class DetailedManualViewController: UIViewController, UIWebViewDelegate, WKNavigationDelegate{
+class DetailedManualViewController: UIViewController, WKNavigationDelegate {
 
     var exc: Exercise?
     
@@ -33,6 +33,8 @@ class DetailedManualViewController: UIViewController, UIWebViewDelegate, WKNavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.webKit.navigationDelegate = self
+        
         title = "Exercise"
         
         nameLabel.text = "Name: " + exc!.name
@@ -40,27 +42,33 @@ class DetailedManualViewController: UIViewController, UIWebViewDelegate, WKNavig
         targetingLabel.text = "Targeting: " + exc!.targetingMuscles
         synergistLabel.text = "Synergists: " + exc!.synergistsMuscles
         technicLabel.text = "Technic: " + exc!.technic
-        webKit.navigationDelegate = self as? WKNavigationDelegate
-        webKit.uiDelegate = self as? WKUIDelegate
+       
         getVideo(URL(string: exc!.videoURL)!)
         
         
-//        if videoWebKit.isLoading == true {
-//            activityLoader.startAnimating()
-//        }
-        
-//        if videoWebKit.isLoading == false {
-//            activityLoader.stopAnimating()
-//            activityLoader.removeFromSuperview()
-//        }
         
     }
     
-//    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-//        activityLoader.stopAnimating()
-//        activityLoader.removeFromSuperview()
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        activityLoader.startAnimating()
+        activityLoader.isHidden = false
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        activityLoader.stopAnimating()
+        activityLoader.isHidden = true
+    }
+    
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//        if keyPath == "loading" {
+//            if webKit.isLoading {
+//                activityLoader.startAnimating()
+//                activityLoader.isHidden = false
+//            } else {
+//                activityLoader.stopAnimating()
+//            }
+//        }
 //    }
-
     
     @IBAction func backButtonPress(_ sender: Any) {
         let storyboard = UIStoryboard(name: "StartPage", bundle: Bundle.main)
@@ -69,7 +77,6 @@ class DetailedManualViewController: UIViewController, UIWebViewDelegate, WKNavig
     }
     
     func getVideo(_ videoURL: URL) {
-//        newVideoWebKit.load(URLRequest(url: videoURL))
         webKit.load(URLRequest(url: videoURL))
     }
     
@@ -77,13 +84,13 @@ class DetailedManualViewController: UIViewController, UIWebViewDelegate, WKNavig
         self.exc = exercise
     }
     
-    func webViewDidStartLoad(_ webView: UIWebView) {
-        activityLoader.isHidden = false
-        activityLoader.startAnimating()
-    }
-    
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        activityLoader.stopAnimating()
-        activityLoader.isHidden = true
-    }
+//    func webViewDidStartLoad(_ webView: UIWebView) {
+//        activityLoader.isHidden = false
+//        activityLoader.startAnimating()
+//    }
+//
+//    func webViewDidFinishLoad(_ webView: UIWebView) {
+//        activityLoader.stopAnimating()
+//        activityLoader.isHidden = true
+//    }
 }
