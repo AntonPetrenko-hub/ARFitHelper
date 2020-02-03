@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class DetailedManualViewController: UIViewController{
+class DetailedManualViewController: UIViewController, UIWebViewDelegate, WKNavigationDelegate{
 
     var exc: Exercise?
     
@@ -26,12 +26,13 @@ class DetailedManualViewController: UIViewController{
     
     @IBOutlet weak var webKit: WKWebView!
     
+    @IBOutlet weak var activityLoader: UIActivityIndicatorView!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         title = "Exercise"
         
         nameLabel.text = "Name: " + exc!.name
@@ -39,7 +40,8 @@ class DetailedManualViewController: UIViewController{
         targetingLabel.text = "Targeting: " + exc!.targetingMuscles
         synergistLabel.text = "Synergists: " + exc!.synergistsMuscles
         technicLabel.text = "Technic: " + exc!.technic
-                
+        webKit.navigationDelegate = self as? WKNavigationDelegate
+        webKit.uiDelegate = self as? WKUIDelegate
         getVideo(URL(string: exc!.videoURL)!)
         
         
@@ -75,5 +77,13 @@ class DetailedManualViewController: UIViewController{
         self.exc = exercise
     }
     
-
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        activityLoader.isHidden = false
+        activityLoader.startAnimating()
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        activityLoader.stopAnimating()
+        activityLoader.isHidden = true
+    }
 }

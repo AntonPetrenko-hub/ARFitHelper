@@ -53,6 +53,10 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="1CR-68-dY6">
+                                <rect key="frame" x="188.5" y="485" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -66,7 +70,9 @@
                             <constraint firstItem="ieg-kO-bmT" firstAttribute="leading" secondItem="Xdn-Yi-Hhw" secondAttribute="trailing" constant="-394" id="UC7-MF-Lnv"/>
                             <constraint firstItem="9ss-Xs-cZD" firstAttribute="trailing" secondItem="7TF-n0-0g6" secondAttribute="trailing" constant="20" id="WuT-Lj-4bg"/>
                             <constraint firstItem="ieg-kO-bmT" firstAttribute="leading" secondItem="9ss-Xs-cZD" secondAttribute="leading" id="Yuh-7T-svP"/>
+                            <constraint firstItem="1CR-68-dY6" firstAttribute="centerX" secondItem="Pgi-ld-ESG" secondAttribute="centerX" id="cnW-C1-AwO"/>
                             <constraint firstItem="oD7-Cp-da3" firstAttribute="leading" secondItem="9ss-Xs-cZD" secondAttribute="leading" constant="20" id="dAO-Sc-EGQ"/>
+                            <constraint firstItem="ieg-kO-bmT" firstAttribute="bottom" secondItem="1CR-68-dY6" secondAttribute="bottom" constant="140" id="eHf-eN-cUd"/>
                             <constraint firstItem="bQb-9j-UMF" firstAttribute="leading" secondItem="9ss-Xs-cZD" secondAttribute="leading" constant="20" id="fNc-r3-5p9"/>
                             <constraint firstItem="oD7-Cp-da3" firstAttribute="top" secondItem="bQb-9j-UMF" secondAttribute="bottom" constant="20" id="k4c-xi-25R"/>
                             <constraint firstItem="1zv-NA-QVB" firstAttribute="top" secondItem="9ss-Xs-cZD" secondAttribute="top" constant="80" id="lLn-AN-QFi"/>
@@ -85,6 +91,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="activityLoader" destination="1CR-68-dY6" id="skK-zh-JPi"/>
                         <outlet property="kindLabel" destination="bQb-9j-UMF" id="9ym-Wt-2w0"/>
                         <outlet property="nameLabel" destination="1zv-NA-QVB" id="ce1-Ct-FGr"/>
                         <outlet property="synergistLabel" destination="7TF-n0-0g6" id="FFm-R0-6nh"/>

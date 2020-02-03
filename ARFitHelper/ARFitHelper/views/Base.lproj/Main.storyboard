@@ -59,6 +59,10 @@
                                     <action selector="loginButtonPress:" destination="fUf-kT-mM5" eventType="touchUpInside" id="E30-PB-3TT"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3zc-Oe-jKI">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -67,7 +71,9 @@
                             <constraint firstItem="5dW-2a-Qt6" firstAttribute="centerX" secondItem="jJv-1Y-y8u" secondAttribute="centerX" id="MoA-on-EP4"/>
                             <constraint firstItem="jJv-1Y-y8u" firstAttribute="trailing" secondItem="0RA-n1-gKv" secondAttribute="trailing" id="RUk-GC-a12"/>
                             <constraint firstItem="0RA-n1-gKv" firstAttribute="top" secondItem="jJv-1Y-y8u" secondAttribute="top" id="TE1-q2-AKr"/>
+                            <constraint firstItem="3zc-Oe-jKI" firstAttribute="centerX" secondItem="zFk-dz-Dnw" secondAttribute="centerX" id="dps-z3-LWt"/>
                             <constraint firstItem="9cd-UL-Zrd" firstAttribute="centerX" secondItem="jJv-1Y-y8u" secondAttribute="centerX" id="dsX-pN-cOd"/>
+                            <constraint firstItem="3zc-Oe-jKI" firstAttribute="centerY" secondItem="zFk-dz-Dnw" secondAttribute="centerY" id="e3f-BY-R1G"/>
                             <constraint firstItem="jJv-1Y-y8u" firstAttribute="bottom" secondItem="0RA-n1-gKv" secondAttribute="bottom" id="e6p-Cu-G4w"/>
                             <constraint firstItem="nZv-ex-oXj" firstAttribute="leading" secondItem="jJv-1Y-y8u" secondAttribute="leading" constant="150" id="ef4-xU-SUI"/>
                             <constraint firstItem="0RA-n1-gKv" firstAttribute="leading" secondItem="jJv-1Y-y8u" secondAttribute="leading" id="eky-Vk-pS8"/>
@@ -84,6 +90,7 @@
                         <viewLayoutGuide key="safeArea" id="jJv-1Y-y8u"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="3zc-Oe-jKI" id="lgl-6v-YQm"/>
                         <outlet property="loginTextField" destination="5dW-2a-Qt6" id="TQZ-EQ-uAr"/>
                         <outlet property="lowLabel" destination="9cd-UL-Zrd" id="3W9-Xx-Wu3"/>
                         <outlet property="passwordTextField" destination="9LM-uN-RZw" id="0qy-uH-H5V"/>

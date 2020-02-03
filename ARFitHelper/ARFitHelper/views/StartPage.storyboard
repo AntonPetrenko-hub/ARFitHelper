@@ -293,7 +293,7 @@
                             <outlet property="delegate" destination="Pu3-B6-bQD" id="dD7-zq-XaY"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Chosen exercises" image="tray.fill" catalog="system" selectedImage="tray.fill" id="D1g-iN-FCa"/>
+                    <tabBarItem key="tabBarItem" title="Chosen exercises" image="star.fill" catalog="system" selectedImage="star.fill" id="D1g-iN-FCa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exz-jQ-TDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -348,7 +348,7 @@
         <scene sceneID="dg9-yo-zGg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Lx-UO-m3O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Manual" image="book" catalog="system" selectedImage="book" id="Qm7-eh-DvN"/>
+                    <tabBarItem key="tabBarItem" title="Manual" image="book.fill" catalog="system" selectedImage="book.fill" id="Qm7-eh-DvN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Wk-NJ-4dd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -365,11 +365,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="64" height="50"/>
+        <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="mainuser" width="640" height="640"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="play.fill" catalog="system" width="58" height="64"/>
         <image name="plus" catalog="system" width="64" height="56"/>
-        <image name="tray.fill" catalog="system" width="64" height="44"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
 </document>

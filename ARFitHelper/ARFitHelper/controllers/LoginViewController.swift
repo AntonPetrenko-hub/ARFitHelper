@@ -17,22 +17,39 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         lowLabel.text = " "
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        activityIndicator.isHidden = true
 
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        lowLabel.text = " "
- 
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        lowLabel.text = " "
+//
+//    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        activityIndicator.stopAnimating()
+
     }
     
 
     @IBAction func loginButtonPress(_ sender: Any) {
        
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
         if validLogin(loginTextField.text) && validPassword(passwordTextField.text) {
             
             let login = loginTextField.text!
