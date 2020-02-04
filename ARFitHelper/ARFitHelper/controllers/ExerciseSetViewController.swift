@@ -12,7 +12,7 @@ import UIKit
 
 class ExerciseSetViewController: UIViewController {
     
- 
+    @IBOutlet weak var nextButton: UIButton!
     
     var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     
@@ -23,6 +23,7 @@ class ExerciseSetViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "sportgirl2.png")!)
         pickerView.delegate = self
         pickerView.dataSource = self
+        configureButton()
         // Do any additional setup after loading the view.
     }
 
@@ -30,6 +31,12 @@ class ExerciseSetViewController: UIViewController {
         let startingPage: UIStoryboard = UIStoryboard(name: "CurrentExrcise", bundle: Bundle.main)
         let mainViewController = startingPage.instantiateViewController(withIdentifier: "CurrExcID") as! CurrentExerciseViewController
         self.present(mainViewController, animated: true)
+    }
+    
+    func configureButton() {
+        nextButton.layer.borderWidth = 1
+        nextButton.layer.borderColor = UIColor.black.cgColor
+        nextButton.layer.cornerRadius = 10
     }
     
 }

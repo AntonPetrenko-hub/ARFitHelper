@@ -10,9 +10,13 @@ import UIKit
 
 class StartTrainingViewController: UIViewController {
 
+    
+    @IBOutlet weak var beginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "beginning1.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "beginningfinal.png")!)
+        configButton()
         // Do any additional setup after loading the view.
     }
     
@@ -22,5 +26,10 @@ class StartTrainingViewController: UIViewController {
         self.present(mainViewController, animated: true)
     }
     
+    func configButton() {
+        beginButton.layer.borderWidth = 1
+        beginButton.layer.borderColor = UIColor.white.cgColor
+        beginButton.layer.cornerRadius = 10
+    }
     
 }

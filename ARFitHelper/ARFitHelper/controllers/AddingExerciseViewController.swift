@@ -10,6 +10,18 @@ import UIKit
 
 class AddingExerciseViewController: UIViewController {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var kindLabel: UILabel!
+    
+    @IBOutlet weak var targetingLabel: UILabel!
+    
+    @IBOutlet weak var synergistsLabel: UILabel!
+    
+    @IBOutlet weak var technicLabel: UILabel!
+    
+    @IBOutlet weak var videourlLabel: UILabel!
+    
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var kindTextField: UITextField!
@@ -22,11 +34,15 @@ class AddingExerciseViewController: UIViewController {
     
     @IBOutlet weak var videoURLTextField: UITextField!
     
+    @IBOutlet weak var addExerciseButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "pumpit2.png")!)
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "pumpit7.png")!)
+        configureButton()
+        setStandardLabelsTexts()
+    
     }
     
     
@@ -46,6 +62,22 @@ class AddingExerciseViewController: UIViewController {
         } else {
             return false
         }
+    }
+    
+    func configureButton() {
+        addExerciseButton.backgroundColor = .black
+//        addExerciseButton.layer.borderWidth = 0.2
+//        addExerciseButton.layer.borderColor = UIColor.black.cgColor
+//        addExerciseButton.layer.cornerRadius = 1
+    }
+    
+    func setStandardLabelsTexts() {
+        nameLabel.text = "Name:"
+               kindLabel.text = "Kind:"
+               targetingLabel.text = "Targetind muscles:"
+               synergistsLabel.text = "Synergists muscles:"
+               technicLabel.text = "Technic:"
+               videourlLabel.text = "Video URL:"
     }
     
     /*

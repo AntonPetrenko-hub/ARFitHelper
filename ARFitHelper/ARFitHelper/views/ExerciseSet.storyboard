@@ -25,7 +25,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ru-hA-69e">
-                                <rect key="frame" x="215" y="548" width="53" height="39"/>
+                                <rect key="frame" x="215" y="548" width="70" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="rbB-ng-Ucu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,6 +60,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="9Ru-hA-69e" id="B5g-cw-XpS"/>
                         <outlet property="pickerView" destination="1iX-Nh-66O" id="Z6B-XI-1kw"/>
                     </connections>
                 </viewController>
