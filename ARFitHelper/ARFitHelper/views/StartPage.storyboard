@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to begin your training?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMq-q2-xe9">
-                                <rect key="frame" x="20" y="104" width="374" height="57.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -112,8 +112,8 @@
                         <constraints>
                             <constraint firstItem="dMq-q2-xe9" firstAttribute="leading" secondItem="BcI-1K-uEY" secondAttribute="leading" constant="20" id="40F-jW-iQ1"/>
                             <constraint firstItem="hAv-CH-MIR" firstAttribute="leading" secondItem="BcI-1K-uEY" secondAttribute="leading" constant="160" id="9Nx-bP-wAN"/>
-                            <constraint firstItem="dMq-q2-xe9" firstAttribute="top" secondItem="BcI-1K-uEY" secondAttribute="top" constant="60" id="Tse-Nq-wm8"/>
-                            <constraint firstItem="hAv-CH-MIR" firstAttribute="top" secondItem="dMq-q2-xe9" secondAttribute="bottom" constant="290" id="VrZ-Al-8n0"/>
+                            <constraint firstItem="dMq-q2-xe9" firstAttribute="top" secondItem="BcI-1K-uEY" secondAttribute="top" constant="20" id="Tse-Nq-wm8"/>
+                            <constraint firstItem="hAv-CH-MIR" firstAttribute="top" secondItem="dMq-q2-xe9" secondAttribute="bottom" constant="330" id="VrZ-Al-8n0"/>
                             <constraint firstAttribute="trailing" secondItem="dMq-q2-xe9" secondAttribute="trailing" constant="20" id="iTp-gh-rSd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BcI-1K-uEY"/>

@@ -49,9 +49,15 @@ class RegisterViewController: UIViewController {
                                 ref.child(result.user.uid).updateChildValues(["name" : name, "email" : email, "surname": self.surnameTextField.text!])
                                 self.dismiss(animated: true, completion: nil)
                                 
-                                let startingPage: UIStoryboard = UIStoryboard(name: "StartPage", bundle: nil)
-                                let mainViewController = startingPage.instantiateViewController(withIdentifier: "MainPageID") as! MainPageTabBarController
-                                self.present(mainViewController, animated: true)
+                                let alert = UIAlertController(title: "Registration", message: "Registration was completed!", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                                    let startingPage: UIStoryboard = UIStoryboard(name: "StartPage", bundle: nil)
+                                    let mainViewController = startingPage.instantiateViewController(withIdentifier: "MainPageID") as! MainPageTabBarController
+                                    self.present(mainViewController, animated: true)
+                                }))
+                                self.present(alert, animated: true)
+                                
+                                
                             }
                         } else {
                             self.showDBorNetworkAlert()
@@ -75,11 +81,9 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func backButtonWasPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MainID") as! LoginViewController
-        self.present(vc, animated: true)
+        let startingPage: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = startingPage.instantiateViewController(withIdentifier: "MainID") as! LoginViewController
+        self.present(mainViewController, animated: true)
     }
-    
-    
 }
 
