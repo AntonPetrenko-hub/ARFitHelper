@@ -34,6 +34,8 @@ class DetailedManualViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         
         self.webKit.navigationDelegate = self
+        self.webKit.isAccessibilityElement = true
+        self.webKit.accessibilityIdentifier = "webViewVideo"
         
         title = "Exercise"
         

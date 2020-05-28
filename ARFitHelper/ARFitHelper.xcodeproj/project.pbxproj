@@ -23,6 +23,7 @@
 		FD7C72AC23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */; };
 		FD7C72AD23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7C72AB23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib */; };
 		FD7D894223D8F31600130C4F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7D894123D8F31600130C4F /* Exercise.swift */; };
+		FD89FCFE243CBD860080A40C /* ARFitHelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD89FCFD243CBD860080A40C /* ARFitHelperUITests.swift */; };
 		FD9D5AE523DA28F9006D06E9 /* DetailedExercise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD9D5AE423DA28F9006D06E9 /* DetailedExercise.storyboard */; };
 		FD9D5AE723DA295F006D06E9 /* DetailedManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D5AE623DA295F006D06E9 /* DetailedManualViewController.swift */; };
 		FDA7838023E309E600B5696E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7837F23E309E600B5696E /* ProfileViewController.swift */; };
@@ -40,6 +41,16 @@
 		FDD1E30323D4F357000698AA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1E30223D4F357000698AA /* RegisterViewController.swift */; };
 		FDD1E30523D4F87B000698AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDD1E30423D4F87B000698AA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD89FD00243CBD860080A40C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDCA8F4323D0ED17002D12E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDCA8F4A23D0ED17002D12E8;
+			remoteInfo = ARFitHelper;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		334A83D17D23541060B73DD6 /* Pods-ARFitHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFitHelper.release.xcconfig"; path = "Target Support Files/Pods-ARFitHelper/Pods-ARFitHelper.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +71,9 @@
 		FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		FD7C72AB23E0A61C00FA49EF /* ChosenExerciseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChosenExerciseTableViewCell.xib; sourceTree = "<group>"; };
 		FD7D894123D8F31600130C4F /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		FD89FCFB243CBD860080A40C /* ARFitHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARFitHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD89FCFD243CBD860080A40C /* ARFitHelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFitHelperUITests.swift; sourceTree = "<group>"; };
+		FD89FCFF243CBD860080A40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD9D5AE423DA28F9006D06E9 /* DetailedExercise.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailedExercise.storyboard; sourceTree = "<group>"; };
 		FD9D5AE623DA295F006D06E9 /* DetailedManualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedManualViewController.swift; sourceTree = "<group>"; };
 		FDA7837F23E309E600B5696E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +95,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD89FCF8243CBD860080A40C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDCA8F4823D0ED17002D12E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -120,6 +141,8 @@
 		FD280B0323D795770024698D /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */,
+				FD7C72A823E0A28900FA49EF /* ChosenExercisesTableViewController.swift */,
 				FD9D5AE623DA295F006D06E9 /* DetailedManualViewController.swift */,
 				FDCA8F6B23D1021E002D12E8 /* logCheck.swift */,
 				FD280AFC23D78B140024698D /* ManualTableViewController.swift */,
@@ -129,9 +152,7 @@
 				FD464E5C23E2E046006D3217 /* CurrentExerciseViewController.swift */,
 				FDD1E30223D4F357000698AA /* RegisterViewController.swift */,
 				FDA7837F23E309E600B5696E /* ProfileViewController.swift */,
-				FD7C72AA23E0A61C00FA49EF /* ChosenExerciseTableViewCell.swift */,
 				FD5AAA8023E2205B00330873 /* LaunchView.swift */,
-				FD7C72A823E0A28900FA49EF /* ChosenExercisesTableViewController.swift */,
 				FDCA8F6923D1013B002D12E8 /* LoginViewController.swift */,
 				FDCA8F5223D0ED17002D12E8 /* ViewController.swift */,
 				FD280AFE23D795310024698D /* ManualTableViewCell.swift */,
@@ -140,10 +161,20 @@
 			path = controllers;
 			sourceTree = "<group>";
 		};
+		FD89FCFC243CBD860080A40C /* ARFitHelperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD89FCFD243CBD860080A40C /* ARFitHelperUITests.swift */,
+				FD89FCFF243CBD860080A40C /* Info.plist */,
+			);
+			path = ARFitHelperUITests;
+			sourceTree = "<group>";
+		};
 		FDCA8F4223D0ED17002D12E8 = {
 			isa = PBXGroup;
 			children = (
 				FDCA8F4D23D0ED17002D12E8 /* ARFitHelper */,
+				FD89FCFC243CBD860080A40C /* ARFitHelperUITests */,
 				FDCA8F4C23D0ED17002D12E8 /* Products */,
 				54F06C3177E83F0490135D3D /* Pods */,
 				2940589A36187A107CDF1C77 /* Frameworks */,
@@ -154,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				FDCA8F4B23D0ED17002D12E8 /* ARFitHelper.app */,
+				FD89FCFB243CBD860080A40C /* ARFitHelperUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +225,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FD89FCFA243CBD860080A40C /* ARFitHelperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD89FD04243CBD860080A40C /* Build configuration list for PBXNativeTarget "ARFitHelperUITests" */;
+			buildPhases = (
+				FD89FCF7243CBD860080A40C /* Sources */,
+				FD89FCF8243CBD860080A40C /* Frameworks */,
+				FD89FCF9243CBD860080A40C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD89FD01243CBD860080A40C /* PBXTargetDependency */,
+			);
+			name = ARFitHelperUITests;
+			productName = ARFitHelperUITests;
+			productReference = FD89FCFB243CBD860080A40C /* ARFitHelperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FDCA8F4A23D0ED17002D12E8 /* ARFitHelper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDCA8F6223D0ED1A002D12E8 /* Build configuration list for PBXNativeTarget "ARFitHelper" */;
@@ -218,10 +268,14 @@
 		FDCA8F4323D0ED17002D12E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Антон Петренко";
 				TargetAttributes = {
+					FD89FCFA243CBD860080A40C = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = FDCA8F4A23D0ED17002D12E8;
+					};
 					FDCA8F4A23D0ED17002D12E8 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -241,11 +295,19 @@
 			projectRoot = "";
 			targets = (
 				FDCA8F4A23D0ED17002D12E8 /* ARFitHelper */,
+				FD89FCFA243CBD860080A40C /* ARFitHelperUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FD89FCF9243CBD860080A40C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDCA8F4923D0ED17002D12E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +371,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD89FCF7243CBD860080A40C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD89FCFE243CBD860080A40C /* ARFitHelperUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDCA8F4723D0ED17002D12E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,6 +408,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FD89FD01243CBD860080A40C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDCA8F4A23D0ED17002D12E8 /* ARFitHelper */;
+			targetProxy = FD89FD00243CBD860080A40C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FDCA8F5423D0ED17002D12E8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -358,6 +436,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FD89FD02243CBD860080A40C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BXFZH2D9V2;
+				INFOPLIST_FILE = ARFitHelperUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PetrenkoInc.ARFitHelperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARFitHelper;
+			};
+			name = Debug;
+		};
+		FD89FD03243CBD860080A40C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BXFZH2D9V2;
+				INFOPLIST_FILE = ARFitHelperUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PetrenkoInc.ARFitHelperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARFitHelper;
+			};
+			name = Release;
+		};
 		FDCA8F6023D0ED1A002D12E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -513,6 +631,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD89FD04243CBD860080A40C /* Build configuration list for PBXNativeTarget "ARFitHelperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD89FD02243CBD860080A40C /* Debug */,
+				FD89FD03243CBD860080A40C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FDCA8F4623D0ED17002D12E8 /* Build configuration list for PBXProject "ARFitHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

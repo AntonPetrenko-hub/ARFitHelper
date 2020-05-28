@@ -40,6 +40,12 @@ class AddingExerciseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "pumpit7.png")!)
+        self.nameTextField.accessibilityIdentifier = "NewExerciseName"
+        self.kindTextField.accessibilityIdentifier = "NewExerciseKind"
+        self.targetingMusclesTextField.accessibilityIdentifier = "NewExerciseTargetingMuscles"
+        self.synergistMusclesTextField.accessibilityIdentifier = "NewExerciseSynergistsMuscles"
+        self.technicTextField.accessibilityIdentifier = "NewExerciseTechnic"
+        self.videoURLTextField.accessibilityIdentifier = "NewExerciseVideoURL"
         configureButton()
         setStandardLabelsTexts()
     
@@ -53,6 +59,11 @@ class AddingExerciseViewController: UIViewController {
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Adding exercise", message: "Can't add exercise! It doesn't conform to minimal amount of chars!", preferredStyle: .alert)
+                     let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                     alert.addAction(okAction)
+                     present(alert, animated: true, completion: nil)
         }
     }
     
@@ -66,9 +77,6 @@ class AddingExerciseViewController: UIViewController {
     
     func configureButton() {
         addExerciseButton.backgroundColor = .black
-//        addExerciseButton.layer.borderWidth = 0.2
-//        addExerciseButton.layer.borderColor = UIColor.black.cgColor
-//        addExerciseButton.layer.cornerRadius = 1
     }
     
     func setStandardLabelsTexts() {

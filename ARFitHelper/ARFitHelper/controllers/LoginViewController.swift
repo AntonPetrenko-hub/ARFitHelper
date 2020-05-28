@@ -31,13 +31,6 @@ class LoginViewController: UIViewController {
 
     }
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        lowLabel.text = " "
-//
-//    }
-    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         activityIndicator.stopAnimating()
@@ -56,18 +49,25 @@ class LoginViewController: UIViewController {
             let password = passwordTextField.text!
             
             if(!login.isEmpty && !password.isEmpty) {
-              Auth.auth().signIn(withEmail: login, password: password) { (result, error) in
-                  if error == nil {
+              Auth.auth().signIn(withEmail: login, password: password) { [weak self] (result, error) in
+                
+                if error != nil {
+                    self?.activityIndicator.stopAnimating()
+                    self?.activityIndicator.isHidden = true
+                    self?.showAlert()
+                } else if error == nil {
                     UserDefaults.standard.set(true, forKey: "isLoggedIn")
                     let startingPage: UIStoryboard = UIStoryboard(name: "StartPage", bundle: nil)
                     let mainViewController = startingPage.instantiateViewController(withIdentifier: "MainPageID") as! MainPageTabBarController
-                    self.present(mainViewController, animated: true)
-                  }
-              }
+                    self?.present(mainViewController, animated: true)
+                }
+             }
             } else {
                 showAlert()
             }
         } else {
+            self.activityIndicator.isHidden = true
+                   self.activityIndicator.stopAnimating()
             lowLabel.text = "Wrong login or password!"
         }
     }
@@ -81,7 +81,9 @@ class LoginViewController: UIViewController {
     }
     
     func showAlert() {
-        let alert = UIAlertController(title: "Error", message: "Fill all fields, please!", preferredStyle: .alert)
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.stopAnimating()
+        let alert = UIAlertController(title: "Error", message: "Fill all fields with correct data, please!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true)
     }

@@ -29,16 +29,20 @@ class ChosenExercisesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chosenExercises.count
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        chosenExercises.remove(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.reloadData()
+    }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
          let cell = tableView.dequeueReusableCell(withIdentifier: "DetailExerciseID", for: indexPath) as! ChosenExerciseTableViewCell
-//                cell.backgroundColor = #colorLiteral(red: 0.8727599978, green: 0.8838961124, blue: 0.8835354447, alpha: 1)
-//        cell.backgroundColor = UIColor(patternImage: UIImage(named: "cellbg4.png")!)
-
                
-                cell.configure(chosenExercises[indexPath.row])
+        cell.configure(chosenExercises[indexPath.row])
         
         return cell
     }

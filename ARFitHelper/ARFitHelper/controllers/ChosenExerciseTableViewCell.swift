@@ -32,5 +32,7 @@ class ChosenExerciseTableViewCell: UITableViewCell {
           nameLabel.text = exercise.name
           descriptionLabel.text = exercise.kind
           musclesLabel.text = exercise.targetingMuscles
+        self.accessoryType = .checkmark
+        
       }
 }

@@ -42,7 +42,12 @@ class RegisterViewController: UIViewController {
                 
                 if(!name.isEmpty && !email.isEmpty && !password.isEmpty) {
                     Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-                        if error == nil {
+                        
+                        if error != nil {
+                            let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                            self.present(alert, animated: true)
+                        } else if error == nil {
                             if let result = result {
                                 let ref = Database.database().reference().child("users")
                                 
@@ -56,11 +61,7 @@ class RegisterViewController: UIViewController {
                                     self.present(mainViewController, animated: true)
                                 }))
                                 self.present(alert, animated: true)
-                                
-                                
                             }
-                        } else {
-                            self.showDBorNetworkAlert()
                         }
                     }
                 } else {
