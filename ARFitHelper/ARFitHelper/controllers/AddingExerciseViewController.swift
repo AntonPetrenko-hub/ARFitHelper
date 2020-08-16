@@ -38,6 +38,7 @@ class AddingExerciseViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        print("Smth to print")
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "pumpit7.png")!)
         self.nameTextField.accessibilityIdentifier = "NewExerciseName"
